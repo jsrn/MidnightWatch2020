@@ -45,6 +45,8 @@ using Server.Targeting;
 
 using RankDefinition = Server.Guilds.RankDefinition;
 using Server.Engines.Fellowship;
+
+using MidnightWatch;
 #endregion
 
 namespace Server.Mobiles
@@ -1930,6 +1932,39 @@ namespace Server.Mobiles
 		}
 		#endregion
 
+		#region InjuryPoints
+		private int m_InjuryPoints = 0;
+
+		[CommandProperty(AccessLevel.GameMaster)]
+		public int InjuryPoints{
+			get
+			{
+				return m_InjuryPoints;
+			}
+			set
+			{
+				m_InjuryPoints = value;
+			}
+		}
+
+		public void AddInjuryPoints(int pointsToAdd)
+		{
+			m_InjuryPoints += pointsToAdd;
+		}
+
+		public void HealInjuryPoint()
+		{
+			if (m_InjuryPoints < 20 && m_InjuryPoints > 0) {
+				m_InjuryPoints -= 1;
+			}
+		}
+
+		private bool TooManyInjuryPoints()
+		{
+			return m_InjuryPoints >= 20;
+		}
+		#endregion
+
         public long NextPassiveDetectHidden { get; set; }
 
 		public override bool Move(Direction d)
@@ -3388,6 +3423,14 @@ namespace Server.Mobiles
 
 		public override void Resurrect()
 		{
+			#region InjuryPoints
+			if (TooManyInjuryPoints())
+			{
+				InjuryPointsHandler.InformPlayerTheyCantBeResurrected(this);
+				return;
+			}
+			#endregion
+
 			bool wasAlive = Alive;
 
 			base.Resurrect();
@@ -3670,6 +3713,10 @@ namespace Server.Mobiles
 			}
 
 			base.OnDeath(c);
+
+			#region InjuryPoints
+			InjuryPointsHandler.HandleDeath(this, m);
+			#endregion
 
 			m_EquipSnapshot = null;
 
