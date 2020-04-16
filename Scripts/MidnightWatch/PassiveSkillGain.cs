@@ -78,9 +78,6 @@ namespace MidnightWatch
         {
           SkillCheck.Gain(player, skill);
         }
-
-        double currentValue = skill.Base;
-        Console.WriteLine("Currently: {0}", currentValue);
       }
       Console.WriteLine("PassiveSkillGain: finished");
     }
