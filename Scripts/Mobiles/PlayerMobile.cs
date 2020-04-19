@@ -3303,6 +3303,13 @@ namespace Server.Mobiles
 				return true;
 			}
 
+			#region MidnightWatch
+			if (PushThroughExceptions.IsIncluded(shoved))
+			{
+				return true;
+			}
+			#endregion
+
 			return base.CheckShove(shoved);
 		}
 
