@@ -31,7 +31,6 @@ namespace Server.Mobiles
         { 
             public InternalBuyInfo() 
             {
-                Add(new GenericBuyInfo(typeof(IronIngot), 5, 16, 0x1BF2, 0, true));
                 Add(new GenericBuyInfo(typeof(Tongs), 13, 14, 0xFBB, 0)); 
  
                 Add(new GenericBuyInfo(typeof(BronzeShield), 66, 20, 0x1B72, 0));
@@ -116,8 +115,7 @@ namespace Server.Mobiles
                 Add(new GenericBuyInfo(typeof(WarMace), 31, 20, 0x1407, 0));
                 Add(new GenericBuyInfo(typeof(Scepter), 39, 20, 0x26BC, 0));
                 Add(new GenericBuyInfo(typeof(BladedStaff), 40, 20, 0x26BD, 0));
-				
-                Add(new GenericBuyInfo("1154005", typeof(MalleableAlloy), 50, 500, 7139, 2949, true));
+                
             }
         }
 

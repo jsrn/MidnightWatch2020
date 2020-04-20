@@ -34,6 +34,7 @@ namespace Server.Mobiles
                 Add(new GenericBuyInfo("special beard dye", typeof(SpecialBeardDye), 500000, 20, 0xE26, 0)); 
                 Add(new GenericBuyInfo("special hair dye", typeof(SpecialHairDye), 500000, 20, 0xE26, 0)); 
                 Add(new GenericBuyInfo("1041060", typeof(HairDye), 60, 20, 0xEFF, 0)); 
+                Add(new GenericBuyInfo("Coupon for a Haircut", typeof(HairRestylingDeed), 200, 20, 0x14F0, 0));
             }
         }
 

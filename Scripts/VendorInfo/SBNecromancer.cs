@@ -36,25 +36,10 @@ namespace Server.Mobiles
 
 				Add( new GenericBuyInfo( typeof( NecromancerSpellbook ), 150, 10, 0x2253, 0 ) );
 				
-				Add(new GenericBuyInfo("1041072", typeof(MagicWizardsHat), 11, 10, 0x1718, Utility.RandomDyedHue()));
                 Add(new GenericBuyInfo(typeof(ScribesPen), 8, 10, 0xFBF, 0));
                 Add(new GenericBuyInfo(typeof(BlankScroll), 5, 20, 0x0E34, 0));
-				Add( new GenericBuyInfo( typeof( RecallRune ), 25, 10, 0x1f14, 0 ) );
 				Add( new GenericBuyInfo( typeof( Spellbook ), 50, 10, 0xEFA, 0 ) );
-			
-				Type[] types = Loot.RegularScrollTypes;
-			
-				for (int i = 0; i < types.Length && i < 8; ++i)
-                {
-                    int itemID = 0x1F2E + i;
 
-                    if (i == 6)
-                        itemID = 0x1F2D;
-                    else if (i > 6)
-                        --itemID;
-
-                    Add(new GenericBuyInfo(types[i], 12 + ((i / 8) * 10), 20, itemID, 0, true));
-                }
 			}
 		}
 
