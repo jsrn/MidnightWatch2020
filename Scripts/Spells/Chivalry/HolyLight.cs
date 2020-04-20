@@ -29,21 +29,21 @@ namespace Server.Spells.Chivalry
         {
             get
             {
-                return 55.0;
+                return 999.0;
             }
         }
         public override int RequiredMana
         {
             get
             {
-                return 10;
+                return 999;
             }
         }
         public override int RequiredTithing
         {
             get
             {
-                return 10;
+                return 999;
             }
         }
         public override int MantraNumber

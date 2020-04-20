@@ -56,7 +56,7 @@ namespace Server.Mobiles
                 this.AddItem(new Server.Items.Dagger());
         }
 
-        public override bool CheckCustomReqs(PlayerMobile pm)
+        /*public override bool CheckCustomReqs(PlayerMobile pm)
         {
             if (pm.Young && !Siege.SiegeShard)
             {
@@ -75,7 +75,7 @@ namespace Server.Mobiles
             }
 
             return true;
-        }
+        }*/
 
         public override void SayWelcomeTo(Mobile m)
         {
@@ -97,11 +97,7 @@ namespace Server.Mobiles
             if (!e.Handled && from is PlayerMobile && from.InRange(this.Location, 2) && e.HasKeyword(0x1F)) // *disguise*
             {
                 PlayerMobile pm = (PlayerMobile)from;
-
-                if (pm.NpcGuild == NpcGuild.ThievesGuild)
                     this.SayTo(from, 501839); // That particular item costs 700 gold pieces.
-                else
-                    this.SayTo(from, 501838); // I don't know what you're talking about.
 
                 e.Handled = true;
             }
@@ -113,15 +109,15 @@ namespace Server.Mobiles
         {
             if (from is PlayerMobile && dropped.Amount == 700)
             {
-                PlayerMobile pm = (PlayerMobile)from;
+/*                PlayerMobile pm = (PlayerMobile)from;
 
-                if (pm.NpcGuild == NpcGuild.ThievesGuild)
-                {
-                    from.AddToBackpack(new DisguiseKit());
+                if (pm.NpcGuild == NpcGuild.ThievesGuild)*/
+                
+                    AddToBackpack(new DisguiseKit());
 
                     dropped.Delete();
                     return true;
-                }
+                
             }
 
             return base.OnGoldGiven(from, dropped);

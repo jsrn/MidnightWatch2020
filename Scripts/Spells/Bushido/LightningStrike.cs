@@ -13,14 +13,14 @@ namespace Server.Spells.Bushido
         {
             get
             {
-                return 10;
+                return 999;
             }
         }
         public override double RequiredSkill
         {
             get
             {
-                return 50.0;
+                return 999.0;
             }
         }
         public override TextDefinition AbilityMessage
