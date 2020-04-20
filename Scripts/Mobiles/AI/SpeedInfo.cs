@@ -171,7 +171,10 @@ namespace Server
 					typeof(PrimevalLich), typeof(StygianDragon), typeof(CoralSnake), typeof(DarkWisp), typeof(DreamWraith),
 					typeof(FireAnt), typeof(KepetchAmbusher), typeof(LavaElemental), typeof(MaddeningHorror), typeof(Wight),
 					typeof(WolfSpider), typeof(UndeadGargoyle), typeof(SlasherOfVeils), typeof(SavagePackWolf), typeof(DemonicJailor),
-					typeof(SilverSerpent),
+					typeof(SilverSerpent), 
+					typeof(CovianScout), typeof(CovianArcher), typeof(CovianArcanist), //Covian NPCs
+					typeof(YewishWaywatcher), typeof(YewishArcher), //Yewish NPCs
+					typeof(Brigand), typeof(BrigandArcher), typeof(Highwayman), typeof(Pirate), typeof(PirateArcher), typeof(DreadCaptain), //Outlaw NPCs
 
 					#region ML named mobs - before Paragon speedboost
 					typeof(LadyJennifyr), typeof(LadyMarai), typeof(MasterJonath), typeof(MasterMikael), typeof(MasterTheophilus),
@@ -189,7 +192,8 @@ namespace Server
 					typeof(Barracoon), typeof(Neira), typeof(Rikktor), typeof(EnergyVortex), typeof(EliteNinja), typeof(Pixie),
 					typeof(FleshRenderer), typeof(KhaldunRevenant),
 					typeof(Leviathan), typeof(FireBeetle), typeof(FanDancer), typeof(ClockworkExodus),
-					typeof(Navrey), typeof(Raptor), typeof(TrapdoorSpider)
+					typeof(Navrey), typeof(Raptor), typeof(TrapdoorSpider),
+					typeof(CovianDragoon), //Cavalry
 				}),
 			// Extremely Fast
             new SpeedInfo(0.08, 0.20, new[] {typeof(Miasma), typeof(Semidar), typeof(Mephitis)}),
@@ -202,7 +206,7 @@ namespace Server
 					typeof(ToxicElemental), typeof(AgapiteElemental), typeof(Alligator), typeof(AncientLich), typeof(Betrayer),
 					typeof(Bird), typeof(BlackBear), typeof(BlackSolenInfiltratorQueen), typeof(BlackSolenInfiltratorWarrior),
 					typeof(BlackSolenQueen), typeof(BlackSolenWarrior), typeof(BlackSolenWorker), typeof(BloodElemental), typeof(Boar),
-					typeof(Bogling), typeof(BoneMagi), typeof(Brigand), typeof(BronzeElemental), typeof(BrownBear), typeof(Bull),
+					typeof(Bogling), typeof(BoneMagi), typeof(BronzeElemental), typeof(BrownBear), typeof(Bull),
 					typeof(BullFrog), typeof(Cat), typeof(Centaur), typeof(ChaosDaemon), typeof(Chicken), typeof(GolemController),
 					typeof(CopperElemental), typeof(CopperElemental), typeof(Cougar), typeof(Cow), typeof(Cyclops), typeof(Daemon),
 					typeof(DeepSeaSerpent), typeof(DesertOstard), typeof(DireWolf), typeof(Dog), typeof(Dolphin), typeof(Dragon),
@@ -217,7 +221,7 @@ namespace Server
 					typeof(Lizardman), typeof(Llama), typeof(Mongbat), typeof(StrongMongbat), typeof(MountainGoat), typeof(Orc),
 					typeof(OrcBomber), typeof(OrcBrute), typeof(OrcCaptain), typeof(OrcishLord), typeof(OrcishMage), typeof(PackHorse),
 					typeof(PackLlama), typeof(Panther), typeof(Pig), typeof(PlagueSpawn), typeof(PolarBear), typeof(Rabbit),
-					typeof(Ratman), typeof(RatmanArcher), typeof(RatmanMage), typeof(RedSolenInfiltratorQueen),
+					typeof(Ratman), typeof(RatmanArcher), typeof(RatmanMage), typeof(RatmanKing), typeof(RedSolenInfiltratorQueen),
 					typeof(RedSolenInfiltratorWarrior), typeof(RedSolenQueen), typeof(RedSolenWarrior), typeof(RedSolenWorker),
 					typeof(RidableLlama), typeof(Ridgeback), typeof(Scorpion), typeof(SeaSerpent), typeof(SerpentineDragon),
 					typeof(Shade), typeof(ShadowIronElemental), typeof(ShadowWisp), typeof(ShadowWyrm), typeof(Sheep),
@@ -244,7 +248,9 @@ namespace Server
 					typeof(Kepetch), typeof(ClanRC), typeof(EnslavedGoblinKeeper), typeof(EnslavedGoblinMage),
 					typeof(EnslavedGoblinScout), typeof(EnslavedGrayGoblin), typeof(GrayGoblin), typeof(GrayGoblinKeeper),
 					typeof(GrayGoblinMage), typeof(Gremlin), typeof(SkeletalDrake), typeof(Slith), typeof(StoneSlith),
-					typeof(ToxicSlith), typeof(WyvernRenowned), typeof(GrayGoblinMageRenowned), typeof(FireDaemon), typeof(AcidSlug)
+					typeof(ToxicSlith), typeof(WyvernRenowned), typeof(GrayGoblinMageRenowned), typeof(FireDaemon), typeof(AcidSlug),
+					typeof(CovianOfficer), typeof(CovianGuard), typeof(CovianWatchman), typeof(CovianGrenadier), //COVIAN NPCS
+					typeof(YewishOfficer), typeof(YewishGuard), typeof(YewishFootman), typeof(YewishBesieger), //YEWISH NPCS
 				})
 		};
 	}
