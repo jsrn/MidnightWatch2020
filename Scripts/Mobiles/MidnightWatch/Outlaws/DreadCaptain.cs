@@ -3,15 +3,15 @@ using Server.Items;
 
 namespace Server.Mobiles
 {
-    [TypeAlias("Server.Mobiles.HumanBrigand")]
-    public class Brigand : BaseCreature
+    [TypeAlias("Server.Mobiles.DreadCaptain")]
+    public class DreadCaptain : BaseCreature
     {
         [Constructable]
-        public Brigand()
+        public DreadCaptain()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
             SpeechHue = Utility.RandomDyedHue();
-            Title = "the brigand";
+            Title = "the pirate captain";
             Hue = Utility.RandomSkinHue();
 
             if (Female = Utility.RandomBool())
@@ -27,57 +27,65 @@ namespace Server.Mobiles
                 AddItem(new ShortPants(Utility.RandomNeutralHue()));
             }
 
-            SetStr(86, 100);
-            SetDex(81, 95);
-            SetInt(61, 75);
+            SetStr(100, 120);
+            SetDex(100, 120);
+            SetInt(61, 100);
 
-            SetDamage(10, 23);
+            SetDamage(15, 25);
 
-            SetSkill(SkillName.Fencing, 66.0, 97.5);
-            SetSkill(SkillName.Macing, 65.0, 87.5);
-            SetSkill(SkillName.MagicResist, 25.0, 47.5);
-            SetSkill(SkillName.Swords, 65.0, 87.5);
-            SetSkill(SkillName.Tactics, 65.0, 87.5);
-            SetSkill(SkillName.Wrestling, 15.0, 37.5);
+            SetResistance(ResistanceType.Physical, 55);
+            SetResistance(ResistanceType.Fire, 50);
+            SetResistance(ResistanceType.Cold, 50);
+            SetResistance(ResistanceType.Poison, 50);
+            SetResistance(ResistanceType.Energy, 50);
+
+            SetSkill(SkillName.Fencing, 100.0);
+            SetSkill(SkillName.Macing, 100.0);
+            SetSkill(SkillName.Swords, 100.0);
+            SetSkill(SkillName.Archery, 100.0);
+            SetSkill(SkillName.Tactics, 100.0);
+            SetSkill(SkillName.Anatomy, 100.0);
+            SetSkill(SkillName.Wrestling, 50.0);
+            SetSkill(SkillName.Parry, 100.0);
 
             Fame = 1000;
             Karma = -1000;
 
-            AddItem(new Boots(Utility.RandomNeutralHue()));
-            AddItem(new FancyShirt());
-            AddItem(new Bandana());
+            AddItem(new ThighBoots(Utility.RandomNeutralHue()));
+            AddItem(new FancyShirt(Utility.RandomNeutralHue()));
+            AddItem(new Doublet(Utility.RandomNeutralHue()));
+            AddItem(new TricorneHat(Utility.RandomNeutralHue()));
 
-            switch ( Utility.Random(7))
+            switch ( Utility.Random(4))
             {
                 case 0:
-                    AddItem(new Longsword());
+                    AddItem(new Kryss());
+                    AddItem(new WoodenShield());
                     break;
                 case 1:
                     AddItem(new Cutlass());
+                    AddItem(new WoodenShield());
                     break;
                 case 2:
-                    AddItem(new Broadsword());
+                    AddItem(new Scimitar());
+                    AddItem(new WoodenShield());
                     break;
                 case 3:
-                    AddItem(new Axe());
-                    break;
-                case 4:
-                    AddItem(new Club());
-                    break;
-                case 5:
-                    AddItem(new Dagger());
-                    break;
-                case 6:
-                    AddItem(new Spear());
+                    AddItem(new Hatchet());
                     break;
             }
 
             Utility.AssignRandomHair(this);
         }
 
-        public Brigand(Serial serial)
+        public DreadCaptain(Serial serial)
             : base(serial)
         {
+        }
+
+        public override WeaponAbility GetWeaponAbility()
+        {
+            return Utility.RandomBool() ? WeaponAbility.ArmorIgnore : WeaponAbility.ParalyzingBlow;
         }
 
         public override bool ClickTitle
@@ -107,13 +115,13 @@ namespace Server.Mobiles
         {
             base.OnDeath(c);
 
-            if (Utility.RandomDouble() < 0.75)
+            if (Utility.RandomDouble() < 0.100)
                 c.DropItem(new SeveredHumanEars());
         }
 
         public override void GenerateLoot()
         {
-            AddLoot(LootPack.Average);
+            AddLoot(LootPack.Rich);
         }
 
         public override void Serialize(GenericWriter writer)

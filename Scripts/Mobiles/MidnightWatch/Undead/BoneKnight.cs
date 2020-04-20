@@ -8,32 +8,32 @@ namespace Server.Mobiles
     {
         [Constructable]
         public BoneKnight()
-            : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
+            : base(AIType.AI_Berserk, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
             this.Name = "a bone knight";
             this.Body = 57;
             this.BaseSoundID = 451;
 
-            this.SetStr(196, 250);
-            this.SetDex(76, 95);
-            this.SetInt(36, 60);
+            this.SetStr(250);
+            this.SetDex(95);
+            this.SetInt(60);
 
-            this.SetHits(118, 150);
+            this.SetHits(200);
 
-            this.SetDamage(8, 18);
+            this.SetDamage(10, 25);
 
             this.SetDamageType(ResistanceType.Physical, 40);
             this.SetDamageType(ResistanceType.Cold, 60);
 
-            this.SetResistance(ResistanceType.Physical, 35, 45);
-            this.SetResistance(ResistanceType.Fire, 20, 30);
-            this.SetResistance(ResistanceType.Cold, 50, 60);
-            this.SetResistance(ResistanceType.Poison, 20, 30);
-            this.SetResistance(ResistanceType.Energy, 30, 40);
+            this.SetResistance(ResistanceType.Physical, 70);
+            this.SetResistance(ResistanceType.Fire, 20);
+            this.SetResistance(ResistanceType.Cold, 50);
+            this.SetResistance(ResistanceType.Poison, 80);
+            this.SetResistance(ResistanceType.Energy, 40);
 
-            this.SetSkill(SkillName.MagicResist, 65.1, 80.0);
-            this.SetSkill(SkillName.Tactics, 85.1, 100.0);
-            this.SetSkill(SkillName.Wrestling, 85.1, 95.0);
+            this.SetSkill(SkillName.MagicResist, 80.0);
+            this.SetSkill(SkillName.Tactics, 100.0);
+            this.SetSkill(SkillName.Wrestling, 95.0);
 
             this.Fame = 3000;
             this.Karma = -3000;

@@ -18,25 +18,25 @@ namespace Server.Mobiles
             SetDex(56, 75);
             SetInt(186, 210);
 
-            SetHits(46, 60);
+            SetHits(120);
 
-            SetDamage(3, 7);
+            SetDamage(5, 10);
 
             SetDamageType(ResistanceType.Physical, 100);
 
-            SetResistance(ResistanceType.Physical, 35, 40);
-            SetResistance(ResistanceType.Fire, 20, 30);
+            SetResistance(ResistanceType.Physical, 35, 50);
+            SetResistance(ResistanceType.Fire, 20, 20);
             SetResistance(ResistanceType.Cold, 50, 60);
-            SetResistance(ResistanceType.Poison, 20, 30);
-            SetResistance(ResistanceType.Energy, 30, 40);
+            SetResistance(ResistanceType.Poison, 20, 70);
+            SetResistance(ResistanceType.Energy, 30, 50);
 
-            SetSkill(SkillName.EvalInt, 60.1, 70.0);
-            SetSkill(SkillName.Magery, 60.1, 70.0);
-            SetSkill(SkillName.MagicResist, 55.1, 70.0);
-            SetSkill(SkillName.Tactics, 45.1, 60.0);
-            SetSkill(SkillName.Wrestling, 45.1, 55.0);
-            SetSkill(SkillName.Necromancy, 89, 99.1);
-            SetSkill(SkillName.SpiritSpeak, 90.0, 99.0);
+            SetSkill(SkillName.EvalInt, 80.0);
+            SetSkill(SkillName.Magery, 90.0);
+            SetSkill(SkillName.MagicResist, 80.0);
+            SetSkill(SkillName.Tactics, 80.0);
+            SetSkill(SkillName.Wrestling, 80.0);
+            SetSkill(SkillName.Necromancy, 120.0);
+            SetSkill(SkillName.SpiritSpeak, 90.0);
 
             Fame = 3000;
             Karma = -3000;
@@ -58,7 +58,7 @@ namespace Server.Mobiles
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Average);
-            AddLoot(LootPack.LowScrolls);
+            AddLoot(LootPack.MedScrolls);
             AddLoot(LootPack.Potions);
         }
 
