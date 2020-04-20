@@ -86,14 +86,14 @@ namespace Server.Mobiles
         {
             get
             {
-                return 20;
+                return 15;
             }
         }
         public override HideType HideType
         {
             get
             {
-                return HideType.Horned;
+                return HideType.Barbed;
             }
         }
         public override bool CanFly

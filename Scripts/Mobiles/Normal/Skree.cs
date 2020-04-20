@@ -39,7 +39,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Mysticism, 80, 105.0);
             SetSkill(SkillName.Parry, 75, 85);
 
-            Tamable = true;
+            Tamable = false;
             ControlSlots = 4;
             MinTameSkill = 95.1;
         }

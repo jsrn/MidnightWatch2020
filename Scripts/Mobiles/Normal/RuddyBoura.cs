@@ -38,7 +38,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Tactics, 83.3, 88.8);
             SetSkill(SkillName.Wrestling, 86.6, 87.9);
 
-            Tamable = true;
+            Tamable = false;
             ControlSlots = 2;
             MinTameSkill = 19.1;
 

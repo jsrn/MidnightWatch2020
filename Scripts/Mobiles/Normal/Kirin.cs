@@ -48,7 +48,7 @@ namespace Server.Mobiles
             this.Fame = 9000;
             this.Karma = 9000;
 
-            this.Tamable = true;
+            Tamable = false;
             this.ControlSlots = 2;
             this.MinTameSkill = 95.1;
         }

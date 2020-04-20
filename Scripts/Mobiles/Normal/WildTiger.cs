@@ -56,7 +56,7 @@ namespace Server.Mobiles
             if (Utility.RandomDouble() < .33)
                 PackItem(Engines.Plants.Seed.RandomPeculiarSeed(Utility.RandomList(1, 1, 1, 1, 2, 2, 2, 3, 3, 4)));
 
-            Tamable = true;
+            Tamable = false;
             ControlSlots = 2;
             MinTameSkill = 95.1;
 

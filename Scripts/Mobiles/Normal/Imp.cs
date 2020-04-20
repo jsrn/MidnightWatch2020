@@ -59,7 +59,7 @@ namespace Server.Mobiles
 				case 12: PackItem(new WraithFormScroll()); break;
 			}
 
-            Tamable = true;
+            Tamable = false;
             ControlSlots = 2;
             MinTameSkill = 83.1;
         }

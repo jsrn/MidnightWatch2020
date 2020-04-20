@@ -81,19 +81,19 @@ namespace Server.Mobiles
         {
             get
             {
-                return 15;
+                return 5;
             }
         }
         public override HideType HideType
         {
             get
             {
-                return HideType.Spined;
+                return HideType.Barbed;
             }
         }
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Average);
+            this.AddLoot(LootPack.Meager);
         }
 
         public override void Serialize(GenericWriter writer)

@@ -8,7 +8,7 @@ namespace Server.Mobiles
     {
         [Constructable]
         public Skeleton()
-            : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
+            : base(AIType.AI_Berserk, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
             this.Name = "a skeleton";
             this.Body = Utility.RandomList(50, 56);

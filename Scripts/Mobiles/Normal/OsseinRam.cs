@@ -39,7 +39,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Necromancy, 20.0);
             SetSkill(SkillName.SpiritSpeak, 20.0);
 
-            Tamable = true;
+            Tamable = false;
             ControlSlots = 2;
             MinTameSkill = 72.0;
 

@@ -70,6 +70,22 @@ namespace Server.Mobiles
                 return Poison.Deadly;
             }
         }
+
+        public override int Hides
+        {
+            get
+            {
+                return 25;
+            }
+        }
+        public override HideType HideType
+        {
+            get
+            {
+                return HideType.Horned;
+            }
+        }
+
         public override void GenerateLoot()
         {
             this.AddLoot(LootPack.Average);

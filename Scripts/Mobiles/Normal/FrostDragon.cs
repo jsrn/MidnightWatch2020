@@ -43,7 +43,7 @@ namespace Server.Mobiles
             Fame = 25000;
             Karma = -25000;
 
-            Tamable = true;
+            Tamable = false;
             ControlSlots = 5;
             MinTameSkill = 105.0;
 

@@ -49,7 +49,7 @@ namespace Server.Mobiles
 
             PackBodyPartOrBones();
 
-            Tamable = true;
+            Tamable = false;
             ControlSlots = 3;
             MinTameSkill = 93.9;
 

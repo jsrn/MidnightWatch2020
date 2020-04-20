@@ -60,6 +60,21 @@ namespace Server.Mobiles
             }
         }
 
+        public override int Hides
+        {
+            get
+            {
+                return 15;
+            }
+        }
+        public override HideType HideType
+        {
+            get
+            {
+                return HideType.Barbed;
+            }
+        }
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Average);

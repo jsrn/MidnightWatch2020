@@ -92,6 +92,7 @@ namespace Server.Mobiles
             return base.IsEnemy(m);
         }
 
+//Do not attack mobiles wearing Orcish Kin Masks
         public override void AggressiveAction(Mobile aggressor, bool criminal)
         {
             base.AggressiveAction(aggressor, criminal);

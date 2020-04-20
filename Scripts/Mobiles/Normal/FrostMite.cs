@@ -37,7 +37,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.DetectHidden, 60.0, 80.0);
             SetSkill(SkillName.Focus, 100.0, 115.0);
 
-            Tamable = true;
+            Tamable = false;
             ControlSlots = 3;
             MinTameSkill = 102.0;
 

@@ -47,10 +47,8 @@ namespace Server.Mobiles
 			switch (Utility.Random(25))
             {
                 case 0: PackItem(new LichFormScroll()); break;
-                case 1: PackItem(new PoisonStrikeScroll()); break;
-                case 2: PackItem(new StrangleScroll()); break;
-                case 3: PackItem(new VengefulSpiritScroll()); break;
-				case 4: PackItem(new WitherScroll()); break;
+                case 1: PackItem(new PainSpikeScroll()); break;
+                case 2: PackItem(new BloodOathScroll()); break;
 			}
 
             PackNecroReg(17, 24);

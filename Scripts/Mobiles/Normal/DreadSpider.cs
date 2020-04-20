@@ -46,7 +46,7 @@ namespace Server.Mobiles
 
             PackItem(new SpidersSilk(8));
 
-            Tamable = true;
+            Tamable = false;
             ControlSlots = 3;
             MinTameSkill = 96.0;
         }
@@ -60,6 +60,21 @@ namespace Server.Mobiles
         public override Poison PoisonImmune { get { return Poison.Lethal; } }
         public override Poison HitPoison { get { return Poison.Lethal; } }
         public override int TreasureMapLevel { get { return 3; } }
+
+        public override int Hides
+        {
+            get
+            {
+                return 30;
+            }
+        }
+        public override HideType HideType
+        {
+            get
+            {
+                return HideType.Horned;
+            }
+        }
 
         public override void GenerateLoot()
         {

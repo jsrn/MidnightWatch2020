@@ -47,7 +47,7 @@ namespace Server.Mobiles
             this.CantWalk = true;
 
             //Rope is supposed to be a rare drop.  ref UO Guide Kraken
-            if (Utility.RandomDouble() < 0.05)
+            if (Utility.RandomDouble() < 0.10)
             {
                 PackItem(new Rope());
             }                       
