@@ -615,6 +615,19 @@ namespace Server.Items
 					from.SendLocalizedMessage(500179); // That spell is already present in that spellbook.
 					return false;
 				}
+				//Disables adding these scrolls to spellbooks.
+				else if (scroll is ArchProtectionScroll || scroll is RecallScroll || scroll is BladeSpiritsScroll ||
+						scroll is MarkScroll || scroll is MassCurseScroll || scroll is ChainLightningScroll  ||
+						scroll is GateTravelScroll || scroll is MeteorSwarmScroll || scroll is EarthquakeScroll ||
+						scroll is EnergyVortexScroll || scroll is SummonDaemonScroll || scroll is ParalyzeFieldScroll ||
+						scroll is EnergyFieldScroll || scroll is PoisonStrikeScroll || scroll is VengefulSpiritScroll ||
+						scroll is WitherScroll || scroll is RisingColossusScroll || scroll is MassSleepScroll ||
+						scroll is AnimatedWeaponScroll || scroll is NetherCycloneScroll || scroll is ThunderstormScroll ||
+						scroll is WildfireScroll || scroll is EssenceOfWindScroll || scroll is DryadAllureScroll ||
+						scroll is SummonFeyScroll || scroll is SummonFiendScroll)
+				{
+					return false;
+				}
 				else
 				{
 					int val = scroll.SpellID - BookOffset;
