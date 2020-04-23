@@ -109,6 +109,12 @@ namespace Server.Items
 
                     Consume();
                 }
+                else if (DisguiseTimers.IsDisguised((Mobile)obj))
+                {
+                    pm.SetHairMods(-1, -1);
+                    DisguiseTimers.RemoveTimer((Mobile)obj);
+                    from.SendMessage("You remove your disguise.");
+                }
                 else
                 {
                     from.LocalOverheadMessage(Network.MessageType.Regular, 0x3B2, 1005422); // Hmmmm... this does not need to be cleaned.
