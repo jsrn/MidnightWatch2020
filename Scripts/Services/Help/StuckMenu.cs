@@ -9,15 +9,15 @@ namespace Server.Menus.Questions
 {
     public class StuckMenuEntry
     {
-        private readonly int m_Name;
+        private readonly string m_Name;
         private readonly Point3D[] m_Locations;
-        public StuckMenuEntry(int name, Point3D[] locations)
+        public StuckMenuEntry(string name, Point3D[] locations)
         {
             m_Name = name;
             m_Locations = locations;
         }
 
-        public int Name
+        public string Name
         {
             get
             {
@@ -37,71 +37,16 @@ namespace Server.Menus.Questions
     {
         private static readonly StuckMenuEntry[] m_Entries = new StuckMenuEntry[]
         {
-            // Britain
-            new StuckMenuEntry(1011028, new Point3D[]
+            new StuckMenuEntry("Altmere", new Point3D[]
             {
-                new Point3D(1522, 1757, 28),
-                new Point3D(1519, 1619, 10),
-                new Point3D(1457, 1538, 30),
-                new Point3D(1607, 1568, 20),
-                new Point3D(1643, 1680, 18)
-            }),
-
-            // Trinsic
-            new StuckMenuEntry(1011029, new Point3D[]
-            {
-                new Point3D(2005, 2754, 30),
-                new Point3D(1993, 2827, 0),
-                new Point3D(2044, 2883, 0),
-                new Point3D(1876, 2859, 20),
-                new Point3D(1865, 2687, 0)
-            }),
-
-            // Vesper
-            new StuckMenuEntry(1011030, new Point3D[]
-            {
-                new Point3D(2973, 891, 0),
-                new Point3D(3003, 776, 0),
-                new Point3D(2910, 727, 0),
-                new Point3D(2865, 804, 0),
-                new Point3D(2832, 927, 0)
-            }),
-
-            // Minoc
-            new StuckMenuEntry(1011031, new Point3D[]
-            {
-                new Point3D(2498, 392, 0),
-                new Point3D(2433, 541, 0),
-                new Point3D(2445, 501, 15),
-                new Point3D(2501, 469, 15),
-                new Point3D(2444, 420, 15)
-            }),
-
-            // Yew
-            new StuckMenuEntry(1011032, new Point3D[]
-            {
-                new Point3D(490, 1166, 0),
-                new Point3D(652, 1098, 0),
-                new Point3D(650, 1013, 0),
-                new Point3D(536, 979, 0),
-                new Point3D(464, 970, 0)
-            }),
-
-            // Cove
-            new StuckMenuEntry(1011033, new Point3D[]
-            {
-                new Point3D(2230, 1159, 0),
-                new Point3D(2218, 1203, 0),
-                new Point3D(2247, 1194, 0),
-                new Point3D(2236, 1224, 0),
-                new Point3D(2273, 1231, 0)
+                new Point3D(2117, 868, 1),
+                new Point3D(2168, 858, 1)
             })
         };
 
         private static readonly StuckMenuEntry[] m_T2AEntries = new StuckMenuEntry[]
         {
-            // Papua
-            new StuckMenuEntry(1011057, new Point3D[]
+            new StuckMenuEntry("Papua", new Point3D[]
             {
                 new Point3D(5720, 3109, -1),
                 new Point3D(5677, 3176, -3),
@@ -110,8 +55,7 @@ namespace Server.Menus.Questions
                 new Point3D(5777, 3270, -1)
             }),
 
-            // Delucia
-            new StuckMenuEntry(1011058, new Point3D[]
+            new StuckMenuEntry("Delucia", new Point3D[]
             {
                 new Point3D(5216, 4033, 37),
                 new Point3D(5262, 4049, 37),
@@ -123,8 +67,7 @@ namespace Server.Menus.Questions
 
         private static readonly StuckMenuEntry[] m_TerMurEntries = new StuckMenuEntry[]
         {
-            // Royal City
-            new StuckMenuEntry(1112571, new Point3D[]
+            new StuckMenuEntry("Royal City", new Point3D[]
             {
                 new Point3D(750, 3440, -20),
                 new Point3D(709, 3444, -20),
@@ -133,8 +76,7 @@ namespace Server.Menus.Questions
                 new Point3D(738, 3486, -19)
             }),
 
-            // Holy City
-            new StuckMenuEntry(1112572, new Point3D[]
+            new StuckMenuEntry("Holy City", new Point3D[]
             {
                 new Point3D(997, 3869, -42),
                 new Point3D(961, 3921, -42),
@@ -169,7 +111,7 @@ namespace Server.Menus.Questions
                 StuckMenuEntry entry = entries[i];
 
                 AddButton(50, 55 + 35 * i, 208, 209, i + 1, GumpButtonType.Reply, 0);
-                AddHtmlLocalized(75, 55 + 35 * i, 335, 40, entry.Name, false, false);
+                AddHtml(75, 55 + 35 * i, 335, 40, entry.Name, false, false);
             }
 
             AddButton(55, 263, 4005, 4007, 0, GumpButtonType.Reply, 0);
