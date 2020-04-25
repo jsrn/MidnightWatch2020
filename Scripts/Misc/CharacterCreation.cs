@@ -62,6 +62,7 @@ namespace Server.Misc
 			}
 
 			PackItem(new Gold(1000)); // Starting gold can be customized here
+			PackItem(new MythicCharacterToken());
 		}
 
 		private static void AddShirt(Mobile m, int shirtHue)
