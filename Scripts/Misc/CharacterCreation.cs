@@ -191,8 +191,6 @@ namespace Server.Misc
 
 			newChar.Hunger = 20;
 
-			var young = false;
-
 			if (newChar is PlayerMobile)
 			{
 				var pm = (PlayerMobile)newChar;
@@ -253,16 +251,6 @@ namespace Server.Misc
 
 			if (TestCenter.Enabled)
 				TestCenter.FillBankbox(newChar);
-
-			if (young)
-			{
-				var ticket = new NewPlayerTicket
-				{
-					Owner = newChar
-				};
-				
-				newChar.BankBox.DropItem(ticket);
-			}
 
 			var city = args.City;
 			var map = Siege.SiegeShard && city.Map == Map.Trammel ? Map.Felucca : city.Map;
