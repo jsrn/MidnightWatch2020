@@ -182,8 +182,10 @@ namespace Server.Misc
 			newChar.Player = true;
 			newChar.AccessLevel = args.Account.AccessLevel;
 			newChar.Female = args.Female;
+			
+			newChar.AcceptGuildInvites = true;
 
-		    newChar.Race = args.Race; //Sets body
+		  newChar.Race = args.Race; //Sets body
 
 			newChar.Hue = args.Hue | 0x8000;
 
