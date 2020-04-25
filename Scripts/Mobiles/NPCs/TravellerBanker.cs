@@ -4,27 +4,23 @@ using Server.Items;
 
 namespace Server.Mobiles
 {
-	public class GypsyFortuneTeller : BaseHealer
+	public class TravellerBanker : Banker
 	{
 		[Constructable]
-		public GypsyFortuneTeller()
+		public TravellerBanker()
 		{
-			Title = "the fortune teller";
+			Title = "the traveller banker";
 			SetSkill(SkillName.Begging, 64.0, 100.0);
 		}
 
-		public GypsyFortuneTeller(Serial serial)
+		public TravellerBanker(Serial serial)
 			: base(serial)
 		{ }
-		
-		public override bool IsInvulnerable
-        {
-            get
-            {
-                return true;
-            }
-        }
-		
+
+		public override bool IsActiveVendor { get { return false; } }
+		public override NpcGuild NpcGuild { get { return NpcGuild.None; } }
+		public override bool ClickTitle { get { return false; } }
+
 		public override void InitOutfit()
 		{
 			base.InitOutfit();

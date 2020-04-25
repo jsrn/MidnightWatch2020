@@ -41,6 +41,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Anatomy, 80.0);
             SetSkill(SkillName.Wrestling, 50.0);
             SetSkill(SkillName.Parry, 75.0);
+            SetSkill(SkillName.Tinkering, 500.0);
 
             Fame = 1000;
             Karma = -1000;

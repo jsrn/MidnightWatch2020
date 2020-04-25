@@ -20,9 +20,9 @@ namespace Server.Mobiles
             Hits = 120;
             Team = 200;
 
-            SetStr(85, 80);
-            SetDex(100, 50);
-            SetInt(61, 120);
+            SetStr(85);
+            SetDex(100);
+            SetInt(120);
             
             SetDamage(10, 20);
 
@@ -38,6 +38,9 @@ namespace Server.Mobiles
             SetSkill(SkillName.Inscribe, 100.0);
             SetSkill(SkillName.Focus, 100.0);
             SetSkill(SkillName.MagicResist, 100.0);
+            SetSkill(SkillName.Meditation, 100.0);
+            SetSkill(SkillName.Focus, 100.0);
+            SetSkill(SkillName.Tinkering, 500.0);
 
             Fame = 1000;
             Karma = -1000;

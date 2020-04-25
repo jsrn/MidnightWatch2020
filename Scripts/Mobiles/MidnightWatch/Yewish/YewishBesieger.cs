@@ -38,6 +38,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Tactics, 100.0);
             SetSkill(SkillName.Anatomy, 100.0);
             SetSkill(SkillName.Parry, 100.0);
+            SetSkill(SkillName.Tinkering, 500.0);
 
             Fame = 1000;
             Karma = -1000;

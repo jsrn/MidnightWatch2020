@@ -17,12 +17,12 @@ namespace Server.Mobiles
             SpeechHue = Utility.RandomDyedHue();
             Hue = Utility.RandomSkinHue();
             Body = 400;
-            Hits = 100;
+            Hits = 150;
             Team = 300;
 
-            SetStr(90, 100);
-            SetDex(90, 95);
-            SetInt(61, 75);
+            SetStr(100);
+            SetDex(95);
+            SetInt(75);
 
             SetResistance(ResistanceType.Physical, 60);
             SetResistance(ResistanceType.Fire, 50);
@@ -35,6 +35,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Tactics, 90.0);
             SetSkill(SkillName.Anatomy, 90.0);
             SetSkill(SkillName.DetectHidden, 80.0);
+            SetSkill(SkillName.Tinkering, 500.0);
 
             Fame = 1000;
             Karma = -1000;
@@ -51,7 +52,7 @@ namespace Server.Mobiles
             AddItem(new RingmailGloves());
             AddItem(new LeatherNinjaBelt());
             AddItem(new CompositeBow());
-            PackItem(new Arrow(50));
+            PackItem(new Arrow(30));
 
 
             Utility.AssignRandomHair(this);

@@ -3,10 +3,10 @@ using Server.Items;
 
 namespace Server.Mobiles
 {
-    public class Gypsy : BaseCreature
+    public class Traveller : BaseCreature
     {
         [Constructable]
-        public Gypsy()
+        public Traveller()
             : base(AIType.AI_Animal, FightMode.None, 10, 1, 0.2, 0.4)
         {
             InitStats(31, 41, 51);
@@ -27,7 +27,7 @@ namespace Server.Mobiles
                 AddItem(new Kilt(Utility.RandomDyedHue()));
                 AddItem(new Shirt(Utility.RandomDyedHue()));
                 AddItem(new ThighBoots());
-                Title = "the gypsy";
+                Title = "the traveller";
             }
             else
             {
@@ -36,7 +36,7 @@ namespace Server.Mobiles
                 AddItem(new ShortPants(Utility.RandomNeutralHue()));
                 AddItem(new Shirt(Utility.RandomDyedHue()));
                 AddItem(new Sandals());
-                Title = "the gypsy";
+                Title = "the traveller";
             }
 
             AddItem(new Bandana(Utility.RandomDyedHue()));
@@ -53,7 +53,7 @@ namespace Server.Mobiles
             this.AddItem(pack);
         }
 
-        public Gypsy(Serial serial)
+        public Traveller(Serial serial)
             : base(serial)
         {
         }

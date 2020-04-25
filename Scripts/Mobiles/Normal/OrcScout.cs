@@ -51,9 +51,9 @@ namespace Server.Mobiles
 			Fame = 1500;
 			Karma = -1500;
 
-			PackItem(new Apple(Utility.RandomMinMax(3, 5)));
-			PackItem(new Arrow(Utility.RandomMinMax(60, 70)));
-			PackItem(new Bandage(Utility.RandomMinMax(1, 15)));
+			PackItem(new Apple(Utility.RandomMinMax(1, 2)));
+			PackItem(new Arrow(Utility.RandomMinMax(5, 10)));
+			PackItem(new Bandage(Utility.RandomMinMax(1, 5)));
 
 			if (0.1 > Utility.RandomDouble())
 			{
@@ -81,7 +81,7 @@ namespace Server.Mobiles
 		public override void GenerateLoot()
 
 		{
-			AddLoot(LootPack.Rich);
+			AddLoot(LootPack.Meager);
 		}
 
 		public override bool IsEnemy(Mobile m)

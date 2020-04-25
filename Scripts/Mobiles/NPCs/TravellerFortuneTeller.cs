@@ -1,38 +1,55 @@
+#region References
+using Server.Items;
+#endregion
+
 namespace Server.Mobiles
 {
-	public class GypsyAnimalTrainer : AnimalTrainer
+	public class TravellerFortuneTeller : BaseHealer
 	{
 		[Constructable]
-		public GypsyAnimalTrainer()
+		public TravellerFortuneTeller()
 		{
+			Title = "the fortune teller";
 			SetSkill(SkillName.Begging, 64.0, 100.0);
-			
-			if (Utility.RandomBool())
-			{
-				Title = "the gypsy animal trainer";
-			}
-			else
-			{
-				Title = "the gypsy animal herder";
-			}
 		}
 
-		public GypsyAnimalTrainer(Serial serial)
+		public TravellerFortuneTeller(Serial serial)
 			: base(serial)
 		{ }
-
-		public override VendorShoeType ShoeType { get { return Female ? VendorShoeType.ThighBoots : VendorShoeType.Boots; } }
-
-		public override int GetShoeHue()
-		{
-			return 0;
-		}
-
+		
+		public override bool IsInvulnerable
+        {
+            get
+            {
+                return true;
+            }
+        }
+		
 		public override void InitOutfit()
 		{
 			base.InitOutfit();
 
+			switch (Utility.Random(4))
+			{
+				case 0:
+					AddItem(new JesterHat(Utility.RandomBrightHue()));
+					break;
+				case 1:
+					AddItem(new Bandana(Utility.RandomBrightHue()));
+					break;
+				case 2:
+					AddItem(new SkullCap(Utility.RandomBrightHue()));
+					break;
+			}
+
 			Item item = FindItemOnLayer(Layer.Pants);
+
+			if (item != null)
+			{
+				item.Hue = Utility.RandomBrightHue();
+			}
+
+			item = FindItemOnLayer(Layer.Shoes);
 
 			if (item != null)
 			{

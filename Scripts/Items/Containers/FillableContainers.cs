@@ -1524,7 +1524,7 @@ namespace Server.Items
             new Type[]
             {
                 typeof(AnimalTrainer),
-                typeof(GypsyAnimalTrainer)
+                typeof(TravellerAnimalTrainer)
             },
             new FillableEntry[]
             {

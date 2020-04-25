@@ -6,18 +6,18 @@ using Server.Items;
 
 namespace Server.Mobiles
 {
-	public class GypsyMaiden : BaseVendor
+	public class TravellerMaiden : BaseVendor
 	{
 		private readonly List<SBInfo> m_SBInfos = new List<SBInfo>();
 
 		[Constructable]
-		public GypsyMaiden()
-			: base("the gypsy maiden")
+		public TravellerMaiden()
+			: base("the traveller maiden")
 		{ 
 			SetSkill(SkillName.Begging, 64.0, 100.0);
 		}
 
-		public GypsyMaiden(Serial serial)
+		public TravellerMaiden(Serial serial)
 			: base(serial)
 		{ }
 

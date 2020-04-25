@@ -41,6 +41,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Parry, 90.0);
             SetSkill(SkillName.Hiding, 90.0);
             SetSkill(SkillName.Stealth, 90.0);
+            SetSkill(SkillName.Tinkering, 500.0);
 
             Fame = 1000;
             Karma = -1000;

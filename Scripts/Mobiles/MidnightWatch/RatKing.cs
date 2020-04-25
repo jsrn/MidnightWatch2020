@@ -18,7 +18,7 @@ namespace Server.Mobiles
 
             this.SetStr(146, 180);
             this.SetDex(101, 180);
-            this.SetInt(186, 210);
+            this.SetInt(200);
 
             this.SetHits(500);
 
@@ -37,6 +37,8 @@ namespace Server.Mobiles
             this.SetSkill(SkillName.MagicResist, 100.0);
             this.SetSkill(SkillName.Tactics, 100.0);
             this.SetSkill(SkillName.Wrestling, 100.0);
+            this.SetSkill(SkillName.Focus, 100.0);
+            this.SetSkill(SkillName.Meditation, 100.0);
 
             this.Fame = 7500;
             this.Karma = -7500;
