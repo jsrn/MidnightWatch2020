@@ -194,8 +194,9 @@ namespace Server
 					typeof(Navrey), typeof(Raptor), typeof(TrapdoorSpider),
 				}),
 			// Extremely Fast
-            new SpeedInfo(0.08, 0.20, new[] {typeof(Miasma), typeof(Semidar), typeof(Mephitis)}),
+            new SpeedInfo(0.08, 0.20, new[] {typeof(Miasma), typeof(Semidar), typeof(Mephitis),
 								typeof(CovianDragoon), typeof(DragoonHorse), //Cavalry
+				}),
 			// Medium
 			new SpeedInfo(
 				0.25,
