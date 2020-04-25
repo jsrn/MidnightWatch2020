@@ -40,7 +40,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.MagicResist, 100.0);
             SetSkill(SkillName.Meditation, 100.0);
             SetSkill(SkillName.Focus, 100.0);
-            SetSkill(SkillName.Tinkering, 500.0);
+            SetSkill(SkillName.Tinkering, 900.0);
 
             Fame = 1000;
             Karma = -1000;
@@ -57,13 +57,13 @@ namespace Server.Mobiles
             AddItem(new LeatherNinjaBelt());
 
             AddItem(new Spellbook());
-            PackItem(new BlackPearl(20));
-            PackItem(new Garlic(20));
-            PackItem(new Ginseng(20));
-            PackItem(new Bloodmoss(20));
-            PackItem(new MandrakeRoot(20));
-            PackItem(new SpidersSilk(20));
-            PackItem(new SulfurousAsh(20));
+            PackItem(new BlackPearl(2));
+            PackItem(new Garlic(2));
+            PackItem(new Ginseng(2));
+            PackItem(new Bloodmoss(2));
+            PackItem(new MandrakeRoot(2));
+            PackItem(new SpidersSilk(2));
+            PackItem(new SulfurousAsh(2));
 
             Utility.AssignRandomHair(this);
         }

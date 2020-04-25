@@ -35,7 +35,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Tactics, 80.0);
             SetSkill(SkillName.Anatomy, 80.0);
             SetSkill(SkillName.DetectHidden, 50.0);
-            SetSkill(SkillName.Tinkering, 500.0);
+            SetSkill(SkillName.Tinkering, 900.0);
 
             Fame = 1000;
             Karma = -1000;
@@ -50,7 +50,7 @@ namespace Server.Mobiles
             AddItem(new LeatherLegs() {Hue = 2406});
             AddItem(new LeatherGloves() {Hue = 2406});
             AddItem(new Crossbow());
-            PackItem(new Bolt(50));
+            PackItem(new Bolt(5));
 
             Utility.AssignRandomHair(this);
         }

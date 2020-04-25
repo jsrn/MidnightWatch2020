@@ -34,6 +34,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.MagicResist, 65.1, 80.0);
             SetSkill(SkillName.Tactics, 85.1, 100.0);
             SetSkill(SkillName.Wrestling, 85.1, 95.0);
+            SetSkill(SkillName.Tinkering, 900.0);
 
             Fame = 3000;
             Karma = -3000;
@@ -59,7 +60,6 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            AddLoot(LootPack.Average);
             AddLoot(LootPack.Meager);
         }
 

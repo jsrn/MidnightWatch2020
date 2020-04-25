@@ -31,11 +31,12 @@ namespace Server.Mobiles
             this.SetResistance(ResistanceType.Poison, 30, 40);
             this.SetResistance(ResistanceType.Energy, 30, 40);
 
-            this.SetSkill(SkillName.EvalInt, 60.1, 72.5);
-            this.SetSkill(SkillName.Magery, 60.1, 72.5);
-            this.SetSkill(SkillName.MagicResist, 60.1, 75.0);
-            this.SetSkill(SkillName.Tactics, 50.1, 65.0);
-            this.SetSkill(SkillName.Wrestling, 40.1, 50.0);
+            this.SetSkill(SkillName.EvalInt, 72.5);
+            this.SetSkill(SkillName.Magery, 75.5);
+            this.SetSkill(SkillName.MagicResist, 75.0);
+            this.SetSkill(SkillName.Tactics, 65.0);
+            this.SetSkill(SkillName.Wrestling, 50.0);
+            this.SetSkill(SkillName.Focus, 80.0);
 
             this.Fame = 3000;
             this.Karma = -3000;
@@ -92,7 +93,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Average);
+            this.AddLoot(LootPack.Meager);
             this.AddLoot(LootPack.LowScrolls);
         }
 

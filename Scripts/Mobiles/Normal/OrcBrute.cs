@@ -10,18 +10,19 @@ namespace Server.Mobiles
         public OrcBrute()
             : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
-            Body = 189;
+            Body = 7;
+            Hue = 0x497;
 
             Name = "an orc brute";
             BaseSoundID = 0x45A;
 
-            SetStr(767, 945);
+            SetStr(945);
             SetDex(66, 75);
             SetInt(46, 70);
 
-            SetHits(476, 552);
+            SetHits(552);
 
-            SetDamage(20, 25);
+            SetDamage(30, 35);
 
             SetDamageType(ResistanceType.Physical, 100);
 

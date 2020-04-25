@@ -40,6 +40,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Meditation, 85.1, 95.0);
             SetSkill(SkillName.MagicResist, 80.1, 100.0);
             SetSkill(SkillName.Tactics, 70.1, 90.0);
+            SetSkill(SkillName.Tinkering, 900.0);
 
             Fame = 8000;
             Karma = -8000;

@@ -20,7 +20,7 @@ namespace Server.Mobiles
 
         [Constructable]
         public DragoonHorse(string name)
-            : base(name, 0xE2, 0x3EA0, AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4)
+            : base(name, 0xE2, 0x3EA0, AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.08, 0.20)
         {
             int random = Utility.Random(4);
 

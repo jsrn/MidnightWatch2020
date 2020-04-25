@@ -39,6 +39,7 @@ namespace Server.Mobiles
             this.SetSkill(SkillName.Wrestling, 100.0);
             this.SetSkill(SkillName.Focus, 100.0);
             this.SetSkill(SkillName.Meditation, 100.0);
+            this.SetSkill(SkillName.Tinkering, 900.0);
 
             this.Fame = 7500;
             this.Karma = -7500;

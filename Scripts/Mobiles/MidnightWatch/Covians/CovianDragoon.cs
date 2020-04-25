@@ -11,7 +11,7 @@ namespace Server.Mobiles
     {
         [Constructable]
         public CovianDragoon()
-            : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.175, 0.350)
+            : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.08, 0.20)
         {
             Name = "A Covian Dragoon";
             SpeechHue = Utility.RandomDyedHue();
@@ -36,7 +36,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Tactics, 100.0);
             SetSkill(SkillName.Anatomy, 100.0);
             SetSkill(SkillName.Parry, 80.0);
-            SetSkill(SkillName.Tinkering, 500.0);
+            SetSkill(SkillName.Tinkering, 900.0);
 
             Fame = 1000;
             Karma = -1000;

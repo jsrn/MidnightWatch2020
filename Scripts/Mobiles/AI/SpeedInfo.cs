@@ -172,10 +172,9 @@ namespace Server
 					typeof(FireAnt), typeof(KepetchAmbusher), typeof(LavaElemental), typeof(MaddeningHorror), typeof(Wight),
 					typeof(WolfSpider), typeof(UndeadGargoyle), typeof(SlasherOfVeils), typeof(SavagePackWolf), typeof(DemonicJailor),
 					typeof(SilverSerpent), 
-					typeof(CovianScout), typeof(CovianArcher), typeof(CovianArcanist), //Covian NPCs
-					typeof(YewishWaywatcher), typeof(YewishArcher), //Yewish NPCs
+					typeof(CovianOfficer), typeof(CovianGuard), typeof(CovianWatchman), typeof(CovianGrenadier), typeof(CovianScout), typeof(CovianArcher), typeof(CovianArcanist), //Covian NPCs
+					typeof(YewishOfficer), typeof(YewishGuard), typeof(YewishFootman), typeof(YewishBesieger), typeof(YewishWaywatcher), typeof(YewishArcher), //Yewish NPCs
 					typeof(Brigand), typeof(BrigandArcher), typeof(Highwayman), typeof(Pirate), typeof(PirateArcher), typeof(DreadCaptain), //Outlaw NPCs
-
 					#region ML named mobs - before Paragon speedboost
 					typeof(LadyJennifyr), typeof(LadyMarai), typeof(MasterJonath), typeof(MasterMikael), typeof(MasterTheophilus),
 					typeof(RedDeath), typeof(SirPatrick), typeof(Rend), typeof(Grobu), typeof(Gnaw), typeof(Guile), typeof(Irk),
@@ -193,10 +192,10 @@ namespace Server
 					typeof(FleshRenderer), typeof(KhaldunRevenant),
 					typeof(Leviathan), typeof(FireBeetle), typeof(FanDancer), typeof(ClockworkExodus),
 					typeof(Navrey), typeof(Raptor), typeof(TrapdoorSpider),
-					typeof(CovianDragoon), //Cavalry
 				}),
 			// Extremely Fast
             new SpeedInfo(0.08, 0.20, new[] {typeof(Miasma), typeof(Semidar), typeof(Mephitis)}),
+								typeof(CovianDragoon), typeof(DragoonHorse), //Cavalry
 			// Medium
 			new SpeedInfo(
 				0.25,
@@ -249,8 +248,6 @@ namespace Server
 					typeof(EnslavedGoblinScout), typeof(EnslavedGrayGoblin), typeof(GrayGoblin), typeof(GrayGoblinKeeper),
 					typeof(GrayGoblinMage), typeof(Gremlin), typeof(SkeletalDrake), typeof(Slith), typeof(StoneSlith),
 					typeof(ToxicSlith), typeof(WyvernRenowned), typeof(GrayGoblinMageRenowned), typeof(FireDaemon), typeof(AcidSlug),
-					typeof(CovianOfficer), typeof(CovianGuard), typeof(CovianWatchman), typeof(CovianGrenadier), //COVIAN NPCS
-					typeof(YewishOfficer), typeof(YewishGuard), typeof(YewishFootman), typeof(YewishBesieger), //YEWISH NPCS
 				})
 		};
 	}

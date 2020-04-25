@@ -43,9 +43,9 @@ namespace Server.Mobiles
             this.Fame = 2500;
             this.Karma = -2500;
 
-            this.PackItem(new SulfurousAsh(Utility.RandomMinMax(6, 10)));
-            this.PackItem(new MandrakeRoot(Utility.RandomMinMax(6, 10)));
-            this.PackItem(new BlackPearl(Utility.RandomMinMax(6, 10)));
+            this.PackItem(new SulfurousAsh(Utility.RandomMinMax(1, 3)));
+            this.PackItem(new MandrakeRoot(Utility.RandomMinMax(1, 3)));
+            this.PackItem(new BlackPearl(Utility.RandomMinMax(1, 3)));
             this.PackItem(new MortarPestle());
             this.PackItem(new LesserExplosionPotion());
 
@@ -80,7 +80,6 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Average);
             this.AddLoot(LootPack.Meager);
         }
 

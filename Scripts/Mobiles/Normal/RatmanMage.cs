@@ -109,7 +109,7 @@ namespace Server.Mobiles
         }
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich);
+            this.AddLoot(LootPack.Average);
             this.AddLoot(LootPack.LowScrolls);
         }
 

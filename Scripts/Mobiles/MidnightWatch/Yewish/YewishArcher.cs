@@ -35,7 +35,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Tactics, 90.0);
             SetSkill(SkillName.Anatomy, 90.0);
             SetSkill(SkillName.DetectHidden, 80.0);
-            SetSkill(SkillName.Tinkering, 500.0);
+            SetSkill(SkillName.Tinkering, 900.0);
 
             Fame = 1000;
             Karma = -1000;
@@ -52,7 +52,7 @@ namespace Server.Mobiles
             AddItem(new RingmailGloves());
             AddItem(new LeatherNinjaBelt());
             AddItem(new CompositeBow());
-            PackItem(new Arrow(30));
+            PackItem(new Arrow(10));
 
 
             Utility.AssignRandomHair(this);
@@ -96,7 +96,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            AddLoot(LootPack.Rich);
+            AddLoot(LootPack.Average);
         }
 
         public override void Serialize(GenericWriter writer)

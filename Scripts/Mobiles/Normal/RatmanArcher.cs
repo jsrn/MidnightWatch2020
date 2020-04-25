@@ -41,7 +41,7 @@ namespace Server.Mobiles
             this.Karma = -6500;
 
             this.AddItem(new Bow());
-            this.PackItem(new Arrow(Utility.RandomMinMax(50, 70)));
+            this.PackItem(new Arrow(Utility.RandomMinMax(3, 10)));
         }
 
         public RatmanArcher(Serial serial)
@@ -79,7 +79,7 @@ namespace Server.Mobiles
         }
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich);
+            this.AddLoot(LootPack.Meager);
         }
 
         public override void Serialize(GenericWriter writer)
