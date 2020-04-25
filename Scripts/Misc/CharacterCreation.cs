@@ -183,11 +183,9 @@ namespace Server.Misc
 			newChar.Player = true;
 			newChar.AccessLevel = args.Account.AccessLevel;
 			newChar.Female = args.Female;
-			
-			newChar.AcceptGuildInvites = true;
 
-		  newChar.Race = args.Race; //Sets body
-
+			newChar.Race = args.Race; //Sets body
+		
 			newChar.Hue = args.Hue | 0x8000;
 
 			newChar.Hunger = 20;
@@ -195,6 +193,8 @@ namespace Server.Misc
 			if (newChar is PlayerMobile)
 			{
 				var pm = (PlayerMobile)newChar;
+
+				pm.AcceptGuildInvites = true;
 				
 				pm.AutoRenewInsurance = true;
 
