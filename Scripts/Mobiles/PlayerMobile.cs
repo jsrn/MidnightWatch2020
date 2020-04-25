@@ -3451,6 +3451,8 @@ namespace Server.Mobiles
 					deathRobe.Delete();
 				}
 
+				ResurrectionBuffs.Apply(this);
+
                 if (NetState != null /*&& NetState.IsEnhancedClient*/)
                 {
                     Waypoints.RemoveHealers(this, Map);
