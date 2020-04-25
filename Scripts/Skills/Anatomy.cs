@@ -32,7 +32,22 @@ namespace Server.SkillHandlers
             {
                 if (from == targeted)
                 {
-                    from.LocalOverheadMessage(MessageType.Regular, 0x3B2, 500324); // You know yourself quite well enough already.
+                    PlayerMobile pm = (PlayerMobile)from;
+                    string anatomyCheckResult = "";
+                    if (pm.InjuryPoints > 15)
+                    {
+                        anatomyCheckResult = "You are close to death.";
+                    }
+                    else if (pm.InjuryPoints > 10)
+                    {
+                        anatomyCheckResult = "You are looking a little worse for wear.";
+                    }
+                    else
+                    {
+                        anatomyCheckResult = "You look fine.";
+                    }
+                    string anatomyCheckMessage = anatomyCheckResult + " [" + pm.InjuryPoints + "/20]";
+                    from.SendMessage(anatomyCheckMessage);
                 }
                 else if (targeted is TownCrier)
                 {
