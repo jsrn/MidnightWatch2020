@@ -1743,36 +1743,36 @@ namespace Server.Mobiles
 				bought = true;
 			}
 
-			if (!bought)
-			{
-				if (totalCost <= Int32.MaxValue)
-				{
-					if (Banker.Withdraw(buyer, (int)totalCost))
-					{
-						bought = true;
-						fromBank = true;
-					}
-				}
-				else if (buyer.Account != null && AccountGold.Enabled)
-				{
-					if (buyer.Account.WithdrawCurrency(totalCost / AccountGold.CurrencyThreshold))
-					{
-						bought = true;
-						fromBank = true;
-					}
-				}
-			}
+			// if (!bought)
+			// {
+			// 	if (totalCost <= Int32.MaxValue)
+			// 	{
+			// 		if (Banker.Withdraw(buyer, (int)totalCost))
+			// 		{
+			// 			bought = true;
+			// 			fromBank = true;
+			// 		}
+			// 	}
+			// 	else if (buyer.Account != null && AccountGold.Enabled)
+			// 	{
+			// 		if (buyer.Account.WithdrawCurrency(totalCost / AccountGold.CurrencyThreshold))
+			// 		{
+			// 			bought = true;
+			// 			fromBank = true;
+			// 		}
+			// 	}
+			// }
 
-			if (!bought)
-			{
-				cont = buyer.FindBankNoCreate();
+			// if (!bought)
+			// {
+			// 	cont = buyer.FindBankNoCreate();
 
-				if (cont != null && ConsumeGold(cont, totalCost))
-				{
-					bought = true;
-					fromBank = true;
-				}
-			}
+			// 	if (cont != null && ConsumeGold(cont, totalCost))
+			// 	{
+			// 		bought = true;
+			// 		fromBank = true;
+			// 	}
+			// }
 
 			if (!bought)
 			{
