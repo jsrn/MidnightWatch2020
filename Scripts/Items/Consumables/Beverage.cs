@@ -1322,9 +1322,6 @@ namespace Server.Items
                     {
                         if (!m_Drunk.Mounted)
                         {
-                            // turn in a random direction
-                            m_Drunk.Direction = (Direction)Utility.Random(8);
-
                             // heave
                             m_Drunk.Animate(AnimationType.Emote, 0);
                         }
