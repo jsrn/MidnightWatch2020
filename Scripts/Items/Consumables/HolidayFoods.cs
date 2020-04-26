@@ -138,15 +138,6 @@ namespace Server.Items
 					return;
 				}
 
-				/* 
-				* ARRGH! My tooth hurts sooo much!
-				* You just can't find a good Britannian dentist these days...
-				* My teeth!
-				* MAKE IT STOP!
-				* AAAH! It feels like someone kicked me in the teeth!
-				*/
-				ConsumedBy.Say(1077388 + Utility.Random(5));
-
 				if (Utility.RandomBool() && ConsumedBy.Body.IsHuman && !ConsumedBy.Mounted)
 				{
 					ConsumedBy.Animate(32, 5, 1, true, false, 0);
