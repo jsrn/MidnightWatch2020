@@ -112,6 +112,7 @@ namespace Server.Items
                 else if (DisguiseTimers.IsDisguised((Mobile)obj))
                 {
                     pm.SetHairMods(-1, -1);
+                    pm.NameMod = null;
                     DisguiseTimers.RemoveTimer((Mobile)obj);
                     from.SendMessage("You remove your disguise.");
                 }
