@@ -455,7 +455,7 @@ namespace Server
                 return Construct(m_SEClothingTypes, m_AosClothingTypes, m_ClothingTypes) as BaseClothing;
             }
 
-            return Construct(m_AosClothingTypes, m_ClothingTypes) as BaseClothing;
+            return Construct(m_AosClothingTypes, m_ClothingTypes, m_MLClothingTypes, m_SAClothingTypes, M_SEClothingTypes) as BaseClothing;
         }
 
         public static BaseWeapon RandomRangedWeapon(bool inTokuno = false, bool isMondain = false, bool isStygian = false)
@@ -475,7 +475,7 @@ namespace Server
                 return Construct(m_SERangedWeaponTypes, m_AosRangedWeaponTypes, m_RangedWeaponTypes) as BaseWeapon;
             }
 
-            return Construct(m_AosRangedWeaponTypes, m_RangedWeaponTypes) as BaseWeapon;
+            return Construct(m_AosRangedWeaponTypes, m_RangedWeaponTypes, m_MLRangedWeaponTypes, m_SARangedWeaponTypes, m_SERangedWeaponTypes) as BaseWeapon;
         }
 
         public static BaseWeapon RandomWeapon(bool inTokuno = false, bool isMondain = false, bool isStygian = false)
@@ -495,7 +495,7 @@ namespace Server
                 return Construct(m_SEWeaponTypes, m_AosWeaponTypes, m_WeaponTypes) as BaseWeapon;
             }
 
-            return Construct(m_AosWeaponTypes, m_WeaponTypes) as BaseWeapon;
+            return Construct(m_AosWeaponTypes, m_WeaponTypes, m_MLWeaponTypes, m_SAWeaponTypes, m_SEWeaponTypes) as BaseWeapon;
         }
 
         public static Item RandomWeaponOrJewelry(bool inTokuno = false, bool isMondain = false, bool isStygian = false)
@@ -515,7 +515,7 @@ namespace Server
                 return Construct(m_SEWeaponTypes, m_AosWeaponTypes, m_WeaponTypes, m_JewelryTypes);
             }
 
-            return Construct(m_AosWeaponTypes, m_WeaponTypes, m_JewelryTypes);
+            return Construct(m_AosWeaponTypes, m_WeaponTypes, m_JewelryTypes, m_MLWeaponTypes, m_SAWeaponTypes, m_SEWeaponTypes);
         }
 
         public static BaseJewel RandomJewelry(bool isStygian = false)

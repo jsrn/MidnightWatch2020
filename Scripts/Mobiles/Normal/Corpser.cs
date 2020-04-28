@@ -44,6 +44,7 @@ namespace Server.Mobiles
                 this.PackItem(new Log(10));
 
             this.PackItem(new MandrakeRoot(3));
+            this.PackItem(new FertileDirt(Utility.RandomMinMax(1, 4)));
         }
 
         public Corpser(Serial serial)

@@ -30,7 +30,7 @@ namespace Server.Gumps
             AddPage(1);
 
             AddImageTiledButton(14, 44, 0x918, 0x919, 0x64, GumpButtonType.Reply, 0, 0x1411, 0x2C, 18, 8);
-            AddTooltip(1062912);
+            /*AddTooltip(1062912);
             AddHtmlLocalized(98, 44, 250, 60, 1078147, 0x7FFF, false, false); // Royal Leggings of Embers
             AddImageTiledButton(264, 44, 0x918, 0x919, 0x65, GumpButtonType.Reply, 0, 0x234D, 0x0, 18, 12);
             AddTooltip(1062914);
@@ -38,14 +38,14 @@ namespace Server.Gumps
             AddImageTiledButton(14, 108, 0x918, 0x919, 0x66, GumpButtonType.Reply, 0, 0x26C3, 0x504, 18, 8);
             AddTooltip(1062916);
             AddHtmlLocalized(98, 108, 250, 60, 1062915, 0x7FFF, false, false); // Shamino’s Best Crossbow
-            AddImageTiledButton(264, 108, 0x918, 0x919, 0x67, GumpButtonType.Reply, 0, 0x3F1D, 0x0, 18, 8);
+            AddImageTiledButton(264, 108, 0x918, 0x919, 0x67, GumpButtonType.Reply, 0, 0x3F1D, 0x0, 18, 8);*/
             AddTooltip(1062918);
             AddHtmlLocalized(348, 108, 250, 60, 1062917, 0x7FFF, false, false); // The Tapestry of Sosaria
             AddImageTiledButton(14, 172, 0x918, 0x919, 0x68, GumpButtonType.Reply, 0, 0x3F14, 0x0, 18, 8);
             AddTooltip(1062920);
             AddHtmlLocalized(98, 172, 250, 60, 1062919, 0x7FFF, false, false); // Hearth of the Home Fire
             AddImageTiledButton(264, 172, 0x918, 0x919, 0x69, GumpButtonType.Reply, 0, 0xF60, 0x482, -1, 10);
-            AddTooltip(1062922);
+            /*AddTooltip(1062922);
             AddHtmlLocalized(348, 172, 250, 60, 1062921, 0x7FFF, false, false); // The Holy Sword
             AddImageTiledButton(14, 236, 0x918, 0x919, 0x6A, GumpButtonType.Reply, 0, 0x236C, 0x0, 18, 6);
             AddTooltip(1062924);
@@ -58,7 +58,7 @@ namespace Server.Gumps
             AddHtmlLocalized(98, 300, 250, 60, 1075192, 0x7FFF, false, false); // Gauntlets of Valor
             AddImageTiledButton(264, 300, 0x918, 0x919, 0x6D, GumpButtonType.Reply, 0, 0x2B01, 0x0, 18, 9);
             AddTooltip(1075225);
-            AddHtmlLocalized(348, 300, 250, 60, 1075196, 0x7FFF, false, false); // Dupre’s Shield
+            AddHtmlLocalized(348, 300, 250, 60, 1075196, 0x7FFF, false, false); // Dupre’s Shield*/
             AddButton(400, 374, 0xFA5, 0xFA7, 0, GumpButtonType.Page, 2);
             AddHtmlLocalized(440, 376, 60, 20, 1043353, 0x7FFF, false, false); // Next
 
@@ -67,13 +67,13 @@ namespace Server.Gumps
             AddButton(300, 374, 0xFAE, 0xFB0, 0, GumpButtonType.Page, 1);
             AddHtmlLocalized(340, 376, 60, 20, 1011393, 0x7FFF, false, false); // Back
             AddImageTiledButton(14, 44, 0x918, 0x919, 0x6E, GumpButtonType.Reply, 0, 0x2AC6, 0x0, 29, 0);
-            AddTooltip(1075226);
+            /*AddTooltip(1075226);
             AddHtmlLocalized(98, 44, 250, 60, 1075197, 0x7FFF, false, false); // Fountain of Life
-            AddImageTiledButton(264, 44, 0x918, 0x919, 0x6F, GumpButtonType.Reply, 0, 0x2AF9, 0x0, -4, -5);
+            AddImageTiledButton(264, 44, 0x918, 0x919, 0x6F, GumpButtonType.Reply, 0, 0x2AF9, 0x0, -4, -5);*/
             AddTooltip(1075227);
             AddHtmlLocalized(348, 44, 250, 60, 1075198, 0x7FFF, false, false); // Dawn’s Music Box
             AddImageTiledButton(14, 108, 0x918, 0x919, 0x70, GumpButtonType.Reply, 0, 0x2253, 0x0, 18, 12);
-            AddTooltip(1075228);
+            /*AddTooltip(1075228);
             AddHtmlLocalized(98, 108, 250, 60, 1078148, 0x7FFF, false, false); // Ossian Grimoire
             AddImageTiledButton(264, 108, 0x918, 0x919, 0x71, GumpButtonType.Reply, 0, 0x2D98, 0x0, 19, 13);
             AddTooltip(1078527);
@@ -90,7 +90,7 @@ namespace Server.Gumps
             AddImageTiledButton(264, 236, 0x918, 0x919, 0x75, GumpButtonType.Reply, 0, 0x2B02, 0x0, -2, 9);
             AddTooltip(1078526);
             AddHtmlLocalized(348, 236, 250, 60, 1075201, 0x7FFF, false, false); // Quiver of Infinity
-            AddImageTiledButton(14, 300, 0x918, 0x919, 0x76, GumpButtonType.Reply, 0, 0x2A91, 0x0, 25, 5);
+            AddImageTiledButton(14, 300, 0x918, 0x919, 0x76, GumpButtonType.Reply, 0, 0x2A91, 0x0, 25, 5);*/
             AddTooltip(1075986);
             AddHtmlLocalized(98, 300, 250, 60, 1074797, 0x7FFF, false, false); // Bone Throne, Bone Couch<br>and Bone Table
             AddImageTiledButton(264, 300, 0x918, 0x919, 0x77, GumpButtonType.Reply, 0, 0x2A99, 0x0, 18, 1);

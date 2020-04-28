@@ -221,7 +221,7 @@ namespace Server
 			new LootPack(
 				new[]
 				{
-					new LootPackEntry(true, Gold, 100.00, "1d10+5"), 
+					new LootPackEntry(true, Gold, 100.00, "2d10+20"), 
 					/*new LootPackEntry(false, AosMagicItemsPoor, 1.00, 1, 5, 0, 100),*/
 					new LootPackEntry(false, Instruments, 0.02, 1)
 				});
@@ -230,7 +230,7 @@ namespace Server
 			new LootPack(
 				new[]
 				{
-					new LootPackEntry(true, Gold, 100.00, "5d10+10"),
+					new LootPackEntry(true, Gold, 100.00, "10d10+100"),
 					/*new LootPackEntry(false, AosMagicItemsMeagerType1, 20.40, 1, 2, 0, 50),*/
 					/*new LootPackEntry(false, AosMagicItemsMeagerType2, 10.20, 1, 5, 0, 100),*/
 					new LootPackEntry(false, Instruments, 0.10, 1)
@@ -240,7 +240,7 @@ namespace Server
 			new LootPack(
 				new[]
 				{
-					new LootPackEntry(true, Gold, 100.00, "8d10+20"),
+					new LootPackEntry(true, Gold, 100.00, "15d10+100"),
 					/*new LootPackEntry(false, AosMagicItemsAverageType1, 32.80, 1, 3, 0, 50),*/
 					/*new LootPackEntry(false, AosMagicItemsAverageType1, 32.80, 1, 4, 0, 75),*/
 					/*new LootPackEntry(false, AosMagicItemsAverageType2, 19.50, 1, 5, 0, 100),*/
@@ -251,7 +251,7 @@ namespace Server
 			new LootPack(
 				new[]
 				{
-					new LootPackEntry(true, Gold, 100.00, "10d10+300"),
+					new LootPackEntry(true, Gold, 100.00, "20d10+300"),
 					/*new LootPackEntry(false, AosMagicItemsRichType1, 76.30, 1, 4, 0, 75),*/
 					/*new LootPackEntry(false, AosMagicItemsRichType1, 76.30, 1, 4, 0, 75),*/
 					/*new LootPackEntry(false, AosMagicItemsRichType2, 61.70, 1, 5, 0, 100),*/

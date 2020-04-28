@@ -34,7 +34,7 @@ namespace Server.Engines.HuntsmasterChallenge
                 from.SendGump(new BasicInfoGump(1155750, 1155726));
 
                 /*Greetings! Only the most brave Hunters dare take my challenge! To participate, 
-                simply purchase a hunting permit from me for 5,000gp.  When you are ready to to 
+                simply purchase a hunting permit from me for 500gp.  When you are ready to to 
                 hunt seek any species of prey represented by the trophies in this hall.  When you 
                 have bested your quarry use the deed on the corpse to document your kill.  Return 
                 to me and hand me the permit and I will process it.  If your kill beats or ties the 
@@ -95,7 +95,7 @@ namespace Server.Engines.HuntsmasterChallenge
 				
 				if(HuntingPermit.HasPermit(from))
 					from.SendLocalizedMessage(1155702); // You already have a hunting permit.
-				else if(Banker.Withdraw(from, 500, true))
+				else if(Banker.Withdraw(from, 500, true)) // Sets the cost of hunting permits
 				{
 					HuntingPermit permit = new HuntingPermit(from);
 					
