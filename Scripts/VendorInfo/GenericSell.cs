@@ -69,8 +69,8 @@ namespace Server.Mobiles
                 if (price < 1)
                     price = 1;
 
-                if (price > 150)
-                    price = 150;
+                if (price > 100)
+                    price = 100;
             }
             else if (item is BaseWeapon)
             {
@@ -88,8 +88,8 @@ namespace Server.Mobiles
                 if (price < 1)
                     price = 1;
 
-                if (price > 150)
-                    price = 150;
+                if (price > 100)
+                    price = 100;
             }
             else if (item is BaseBeverage)
             {
