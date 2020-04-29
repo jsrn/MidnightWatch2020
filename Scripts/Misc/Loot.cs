@@ -455,7 +455,7 @@ namespace Server
                 return Construct(m_SEClothingTypes, m_AosClothingTypes, m_ClothingTypes) as BaseClothing;
             }
 
-            return Construct(m_AosClothingTypes, m_ClothingTypes, m_MLClothingTypes, m_SAClothingTypes,) as BaseClothing;
+            return Construct(m_AosClothingTypes, m_ClothingTypes, m_MLClothingTypes, m_SAClothingTypes) as BaseClothing;
         }
 
         public static BaseWeapon RandomRangedWeapon(bool inTokuno = false, bool isMondain = false, bool isStygian = false)
