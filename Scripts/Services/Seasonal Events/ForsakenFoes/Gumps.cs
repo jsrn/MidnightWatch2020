@@ -1,15 +1,17 @@
-using Server.Engines.Craft;
-using Server.Engines.Points;
+using Server;
+using System;
+using Server.Mobiles;
 using Server.Gumps;
 using Server.Items;
-using Server.Mobiles;
+using Server.Engines.Points;
+using Server.Engines.Craft;
 
 namespace Server.Engines.Fellowship
 {
     public class FellowshipRewardGump : BaseRewardGump
     {
-        public override int PointsName => 1159184;  // Your Fellowship Silver:
-        public override int RewardLabel => 1159185;  // Would you like to buy something?
+        public override int PointsName { get { return 1159184; } } // Your Fellowship Silver:
+        public override int RewardLabel { get { return 1159185; } } // Would you like to buy something?
 
         public FellowshipRewardGump(Mobile owner, PlayerMobile user)
             : base(owner, user, FellowshipRewards.Rewards, 1159183)
@@ -45,7 +47,7 @@ namespace Server.Engines.Fellowship
 
             if (citem.Type == typeof(RecipeScroll))
             {
-                switch (index)
+                /*switch (index)
                 {
                     default:
                     case 9: item = new RecipeScroll((int)TailorRecipe.CowlOfTheMaceAndShield); break;
@@ -54,7 +56,7 @@ namespace Server.Engines.Fellowship
                     case 12: item = new RecipeScroll((int)TailorRecipe.CrimsonDaggerBelt); break;
                     case 13: item = new RecipeScroll((int)TailorRecipe.CrimsonSwordBelt); break;
                     case 14: item = new RecipeScroll((int)TailorRecipe.CrimsonMaceBelt); break;
-                }
+                }*/
             }
 
             if (item != null)

@@ -1,5 +1,5 @@
-using Server.Items;
 using System;
+using Server.Items;
 
 namespace Server.Engines.Craft
 {
@@ -7,7 +7,7 @@ namespace Server.Engines.Craft
     public enum BowRecipes
     {
         //magical
-        BarbedLongbow = 200,
+        /*BarbedLongbow = 200,
         SlayerLongbow = 201,
         FrozenLongbow = 202,
         LongbowOfMight = 203,
@@ -21,15 +21,27 @@ namespace Server.Engines.Craft
         FaerieFire = 251,
         SilvanisFeywoodBow = 252,
         MischiefMaker = 253,
-        TheNightReaper = 254,
+        TheNightReaper = 254,*/
     }
     #endregion
 
     public class DefBowFletching : CraftSystem
     {
-        public override SkillName MainSkill => SkillName.Fletching;
+        public override SkillName MainSkill
+        {
+            get
+            {
+                return SkillName.Fletching;
+            }
+        }
 
-        public override int GumpTitleNumber => 1044006;
+        public override int GumpTitleNumber
+        {
+            get
+            {
+                return 1044006;
+            }// <CENTER>BOWCRAFT AND FLETCHING MENU</CENTER>
+        }
 
         private static CraftSystem m_CraftSystem;
 
@@ -94,12 +106,18 @@ namespace Server.Engines.Craft
                     return 1044156; // You create an exceptional quality item and affix your maker's mark.
                 else if (quality == 2)
                     return 1044155; // You create an exceptional quality item.
-                else
+                else 
                     return 1044154; // You create the item.
             }
         }
 
-        public override CraftECA ECA => CraftECA.FiftyPercentChanceMinusTenPercent;
+        public override CraftECA ECA
+        {
+            get
+            {
+                return CraftECA.FiftyPercentChanceMinusTenPercent;
+            }
+        }
 
         public override void InitCraftList()
         {
@@ -140,7 +158,7 @@ namespace Server.Engines.Craft
 
             index = AddCraft(typeof(MagicalShortbow), 1044566, 1031551, 85.0, 135.0, typeof(Board), 1044041, 15, 1044351);
 
-            index = AddCraft(typeof(BlightGrippedLongbow), 1044566, 1072907, 75.0, 125.0, typeof(Board), 1044041, 20, 1044351);
+            /*index = AddCraft(typeof(BlightGrippedLongbow), 1044566, 1072907, 75.0, 125.0, typeof(Board), 1044041, 20, 1044351);
             AddRes(index, typeof(LardOfParoxysmus), 1032681, 1, 1053098);
             AddRes(index, typeof(Blight), 1032675, 10, 1053098);
             AddRes(index, typeof(Corruption), 1032676, 10, 1053098);
@@ -205,7 +223,7 @@ namespace Server.Engines.Craft
 
             index = AddCraft(typeof(AssassinsShortbow), 1044566, 1073512, 75.0, 125.0, typeof(Board), 1044041, 15, 1044351);
             AddRes(index, typeof(DarkSapphire), 1026249, 1, 1053098);
-            AddRecipe(index, (int)BowRecipes.AssassinsShortbow);
+            AddRecipe(index, (int)BowRecipes.AssassinsShortbow);*/
 
             SetSubRes(typeof(Board), 1072643);
 
@@ -222,7 +240,7 @@ namespace Server.Engines.Craft
 
             MarkOption = true;
             Repair = true;
-            CanEnhance = true;
+			CanEnhance = true;
         }
     }
 }

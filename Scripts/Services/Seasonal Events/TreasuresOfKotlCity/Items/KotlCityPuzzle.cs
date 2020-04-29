@@ -1,17 +1,18 @@
-using Server.Items;
 using System;
+using Server;
 using System.Collections.Generic;
 using System.Linq;
+using Server.Items;
 
 namespace Server.Engines.TreasuresOfKotlCity
 {
     public class KotlCityPuzzle : BaseAddon
     {
         public static KotlCityPuzzle Puzzle { get; set; }
-        public override BaseAddonDeed Deed => null;
+        public override BaseAddonDeed Deed { get { return null; } }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public int Next => _Order == null || _Order.Count == 0 ? -1 : _Order[0];
+        public int Next { get { return _Order == null || _Order.Count == 0 ? -1 : _Order[0]; } }
 
         private List<int> _Order;
         private int _Index;
@@ -20,11 +21,11 @@ namespace Server.Engines.TreasuresOfKotlCity
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Complete
-        {
-            get { return _Complete; }
+        { 
+            get { return _Complete; } 
             set
             {
-                foreach (KotlCityPuzzleComponent comp in Components.OfType<KotlCityPuzzleComponent>().Where(c => (value && c.Active) || (!value && !c.Active)))
+                foreach (var comp in Components.OfType<KotlCityPuzzleComponent>().Where(c => (value && c.Active) || (!value && !c.Active)))
                     comp.Active = !value;
 
                 if (_Complete && !value)
@@ -57,7 +58,7 @@ namespace Server.Engines.TreasuresOfKotlCity
         private void RandomizeOrder()
         {
             _Order = new List<int>();
-            List<int> list = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            var list = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             int count = Utility.RandomMinMax(5, 10);
 
             int ran = 0;
@@ -99,7 +100,7 @@ namespace Server.Engines.TreasuresOfKotlCity
                 if (comp.Offset.X == _Order[_Index])
                 {
                     comp.Active = false;
-
+                   
                     _Fails = 0;
                     from.PrivateOverheadMessage(Server.Network.MessageType.Regular, 1154, 1157028, from.NetState); // *You activate the switch!*
 
@@ -187,26 +188,26 @@ namespace Server.Engines.TreasuresOfKotlCity
 
     public class KotlCityPuzzleComponent : AddonComponent
     {
-        public override int LabelNumber => 1124182;
+        public override int LabelNumber { get { return 1124182; } }
 
         public bool _Active;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Active
-        {
-            get { return _Active; }
-            set
-            {
+        { 
+            get { return _Active; } 
+            set 
+            { 
                 _Active = value;
 
                 if (_Active && ItemID != 0x9CDE)
                 {
-                    Effects.PlaySound(Location, Map, 0x051);
+                    Effects.PlaySound(this.Location, this.Map, 0x051);
                     ItemID = 0x9CDE;
                 }
                 else if (!_Active && ItemID != 0x9D0B)
                 {
-                    Effects.PlaySound(Location, Map, 0x051);
+                    Effects.PlaySound(this.Location, this.Map, 0x051);
                     ItemID = 0x9D0B;
                 }
             }

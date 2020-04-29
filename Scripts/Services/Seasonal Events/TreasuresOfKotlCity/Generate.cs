@@ -1,5 +1,7 @@
-using Server.Engines.TreasuresOfKotlCity;
+using System;
+using Server;
 using Server.Items;
+using Server.Engines.TreasuresOfKotlCity;
 
 namespace Server.Commands
 {
@@ -16,54 +18,54 @@ namespace Server.Commands
 
             Map map = Map.TerMur;
 
-            KotlDoor door = new KotlDoor();
+            var door = new KotlDoor();
             door.MoveToWorld(new Point3D(610, 2319, 0), map);
 
             if (!FindItem(new Point3D(595, 2289, 8), map))
             {
-                KotlCityPuzzle puzzle = new KotlCityPuzzle();
+                var puzzle = new KotlCityPuzzle();
                 puzzle.MoveToWorld(new Point3D(595, 2289, 8), map);
             }
 
             if (KotlBattleSimulator.Instance == null)
             {
-                KotlBattleSimulator simulator = new KotlBattleSimulator();
+                var simulator = new KotlBattleSimulator();
                 simulator.MoveToWorld(new Point3D(545, 2272, 0), map);
             }
 
             if (!FindItem(new Point3D(607, 2323, 0), map))
             {
-                WheelsOfTime wheels = new WheelsOfTime();
+                var wheels = new WheelsOfTime();
                 wheels.MoveToWorld(new Point3D(607, 2323, 0), map);
             }
 
             if (!FindItem(new Point3D(592, 2393, 0), map))
             {
-                EnergyTileAddon tiles = new EnergyTileAddon(13, Direction.South);
+                var tiles = new EnergyTileAddon(13, Direction.South);
                 tiles.MoveToWorld(new Point3D(592, 2393, 0), map);
             }
 
             if (!FindItem(new Point3D(600, 2393, 0), map))
             {
-                EnergyTileAddon tiles = new EnergyTileAddon(13, Direction.South);
+                var tiles = new EnergyTileAddon(13, Direction.South);
                 tiles.MoveToWorld(new Point3D(600, 2393, 0), map);
             }
 
             if (!FindItem(new Point3D(608, 2393, 0), map))
             {
-                EnergyTileAddon tiles = new EnergyTileAddon(13, Direction.South);
+                var tiles = new EnergyTileAddon(13, Direction.South);
                 tiles.MoveToWorld(new Point3D(608, 2393, 0), map);
             }
 
             if (!FindItem(new Point3D(616, 2393, 0), map))
             {
-                EnergyTileAddon tiles = new EnergyTileAddon(13, Direction.South);
+                var tiles = new EnergyTileAddon(13, Direction.South);
                 tiles.MoveToWorld(new Point3D(616, 2393, 0), map);
             }
 
             if (!FindItem(new Point3D(624, 2393, 0), map))
             {
-                EnergyTileAddon tiles = new EnergyTileAddon(13, Direction.South);
+                var tiles = new EnergyTileAddon(13, Direction.South);
                 tiles.MoveToWorld(new Point3D(624, 2393, 0), map);
             }
 
@@ -72,7 +74,7 @@ namespace Server.Commands
             GenLOSBlockers();
             GenChests();
 
-            Hal hal = new Hal();
+            var hal = new Hal();
             hal.MoveToWorld(new Point3D(489, 1606, 40), map);
         }
 

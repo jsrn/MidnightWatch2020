@@ -1,8 +1,12 @@
-using Server.Engines.Craft;
-using Server.Engines.Points;
-using Server.Gumps;
+using System;
+using Server;
 using Server.Items;
 using Server.Mobiles;
+using Server.Network;
+using Server.Engines.Points;
+using System.Collections.Generic;
+using Server.Gumps;
+using Server.Engines.Craft;
 
 namespace Server.Engines.TreasuresOfKotlCity
 {
@@ -29,13 +33,13 @@ namespace Server.Engines.TreasuresOfKotlCity
 
             if (citem.Type == typeof(RecipeScroll))
             {
-                switch (index)
+                /*switch (index)
                 {
                     default:
                     case 3: item = new RecipeScroll((int)CarpRecipes.KotlBlackRod); break;
                     case 4: item = new RecipeScroll((int)TinkerRecipes.DrSpectorLenses); break;
                     case 5: item = new RecipeScroll((int)TinkerRecipes.KotlAutomatonHead); break;
-                }
+                }*/
             }
             else if (citem.Type == typeof(TreasuresOfKotlRewardDeed))
             {

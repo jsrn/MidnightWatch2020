@@ -1,3 +1,4 @@
+using System;
 using Server.Mobiles;
 using Server.Network;
 using Server.Targeting;
@@ -6,7 +7,7 @@ namespace Server.Items
 {
     public class ExplodingJackOLantern : Item
     {
-        public override int LabelNumber => 1159220;  // Exploding Jack o' Lantern
+        public override int LabelNumber { get { return 1159220; } } // Exploding Jack o' Lantern
 
         [Constructable]
         public ExplodingJackOLantern()
@@ -31,7 +32,7 @@ namespace Server.Items
 
         private class ThrowTarget : Target
         {
-            private readonly Mobile m_From;
+            private Mobile m_From;
 
             public ThrowTarget(Mobile from)
                 : base(12, true, TargetFlags.None)
@@ -67,7 +68,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write(0);
+            writer.Write((int)0);
         }
 
         public override void Deserialize(GenericReader reader)

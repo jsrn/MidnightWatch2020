@@ -1,12 +1,12 @@
-using Server.Items;
 using System;
+using Server.Items;
 using System.Collections.Generic;
 
 namespace Server.Engines.Craft
 {
     public enum CartographyRecipes
     {
-        EodonianWallMap = 1000
+        //EodonianWallMap = 1000
     }
 
     public class DefCartography : CraftSystem
@@ -27,8 +27,20 @@ namespace Server.Engines.Craft
                 return m_CraftSystem;
             }
         }
-        public override SkillName MainSkill => SkillName.Cartography;
-        public override int GumpTitleNumber => 1044008;
+        public override SkillName MainSkill
+        {
+            get
+            {
+                return SkillName.Cartography;
+            }
+        }
+        public override int GumpTitleNumber
+        {
+            get
+            {
+                return 1044008;
+            }// <CENTER>CARTOGRAPHY MENU</CENTER>
+        }
         public override double GetChanceAtMin(CraftItem item)
         {
             return 0.0; // 0%
@@ -99,7 +111,7 @@ namespace Server.Engines.Craft
 
             index = AddCraft(typeof(EodonianWallMap), 1044448, 1156690, 65.0, 125.0, typeof(BlankMap), 1044449, 50, 1044450);
             AddRes(index, typeof(UnabridgedAtlasOfEodon), 1156721, 1, 1156722);
-            AddRecipe(index, (int)CartographyRecipes.EodonianWallMap);
+            //AddRecipe(index, (int)CartographyRecipes.EodonianWallMap);
 
             index = AddCraft(typeof(StarChart), 1044448, 1158493, 0.0, 60.0, typeof(BlankMap), 1044449, 1, 1044450);
             SetForceSuccess(index, 75);
@@ -131,25 +143,25 @@ namespace Server.Engines.Craft
                             }
                             break;
                         case 3:
-                            if (map.CompletedBy == from)
-                            {
+                             if (map.CompletedBy == from)
+                             {
                                 three--;
                                 toConsume.Add(map);
-                            }
+                             }
                             break;
                         case 4:
-                            if (map.CompletedBy == from)
-                            {
+                             if (map.CompletedBy == from)
+                             {
                                 four--;
                                 toConsume.Add(map);
-                            }
+                             }
                             break;
                         case 5:
-                            if (map.CompletedBy == from)
-                            {
+                             if (map.CompletedBy == from)
+                             {
                                 five--;
                                 toConsume.Add(map);
-                            }
+                             }
                             break;
                     }
                 }
