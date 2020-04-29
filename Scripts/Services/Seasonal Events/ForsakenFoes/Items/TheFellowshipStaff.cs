@@ -20,9 +20,9 @@ namespace Server.Items
         //public override int StrengthReq => 20;
         //public override int MinDamage => 15;
         //public override int MaxDamage => 18;
-        p//ublic override float Speed => 3.25f;
+        //public override float Speed => 3.25f;
 
-        public override int InitMinHits => 30;
+        //public override int InitMinHits => 30;
         public override int InitMaxHits => 60;
 
         public override void GetDamageTypes(Mobile wielder, out int phys, out int fire, out int cold, out int pois, out int nrgy, out int chaos, out int direct)
