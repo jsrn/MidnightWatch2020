@@ -17,10 +17,10 @@ namespace Server.Items
 
         public override WeaponAbility PrimaryAbility => WeaponAbility.Block;
         public override WeaponAbility SecondaryAbility => WeaponAbility.ForceOfNature;
-        public override int StrengthReq => 20;
-        public override int MinDamage => 15;
-        public override int MaxDamage => 18;
-        public override float Speed => 3.25f;
+        //public override int StrengthReq => 20;
+        //public override int MinDamage => 15;
+        //public override int MaxDamage => 18;
+        p//ublic override float Speed => 3.25f;
 
         public override int InitMinHits => 30;
         public override int InitMaxHits => 60;

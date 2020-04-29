@@ -22,7 +22,7 @@ namespace Server.Items
 
         public override int InitMinHits => 255;
         public override int InitMaxHits => 255;
-        public override int StrReq => 10;
+        //public override int StrReq => 10;
 
         public override ArmorMaterialType MaterialType => ArmorMaterialType.Plate;
 
