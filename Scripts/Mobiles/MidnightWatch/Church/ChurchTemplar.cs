@@ -59,7 +59,7 @@ namespace Server.Mobiles
                     AddItem(new WoodenKiteShield() {Hue = 0});
                     break;
                 case 1:
-                    AddItem(new BroadSword());
+                    AddItem(new Broadsword());
                     AddItem(new WoodenKiteShield() {Hue = 0});
                     break;
                 case 2:

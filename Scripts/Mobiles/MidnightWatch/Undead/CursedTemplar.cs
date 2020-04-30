@@ -11,7 +11,7 @@ namespace Server.Mobiles
     {
         [Constructable]
         public CursedTemplar()
-            : base(AIType.AI_z, FightMode.Closest, 10, 1, 0.2, 0.4)
+            : base(AIType.AI_Berserk, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
             Name = "A Cursed Templar";
             SpeechHue = Utility.RandomDyedHue();
