@@ -43,22 +43,8 @@ namespace Server.Mobiles
             Fame = 1000;
             Karma = -1000;
 
-            BaseWeapon melee = null;
-
-            switch (Utility.Random(3))
-            {
-                case 0:
-                    melee = new Mace();
-                    break;
-                case 1:
-                    melee = new Broadsword();
-                    break;
-                case 2:
-                    melee = new VikingSword();
-                    break;
-            }
-
-            melee.Movable = false;
+            VikingSword melee = new VikigSword();
+            melee.Movable = false ;
             AddItem(melee);
             melee.Hue = 0x4001;
 
