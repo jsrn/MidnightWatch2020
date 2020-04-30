@@ -18,7 +18,7 @@ namespace Server.Spells.Fifth
             typeof(PolarBear),
             typeof(GrizzlyBear),
             typeof(BlackBear),
-            typeof(Horse),
+            //typeof(Horse),
             typeof(Walrus),
             typeof(Chicken),
             typeof(Scorpion),

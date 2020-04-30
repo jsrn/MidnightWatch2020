@@ -51,7 +51,6 @@ namespace Server.Mobiles
             AddItem(new FancyShirt(Utility.RandomNeutralHue()));
             AddItem(new Doublet(Utility.RandomNeutralHue()));
             AddItem(new FeatheredHat(Utility.RandomNeutralHue()));
-            AddItem(new LeatherMempo(Utility.RandomNeutralHue()));
 
             switch ( Utility.Random(7))
             {

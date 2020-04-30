@@ -11,7 +11,7 @@ namespace Server.Mobiles
     {
         [Constructable]
         public CovianArcanist()
-            : base(AIType.AI_Archer, FightMode.Strongest, 10, 1, 0.2, 0.4)
+            : base(AIType.AI_Mage, FightMode.Strongest, 10, 1, 0.2, 0.4)
         {
             Name = "A Covian Arcanist";
             SpeechHue = Utility.RandomDyedHue();

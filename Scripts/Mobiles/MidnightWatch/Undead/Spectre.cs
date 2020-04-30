@@ -8,20 +8,20 @@ namespace Server.Mobiles
     {
         [Constructable]
         public Spectre()
-            : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4)
+            : base(AIType.AI_Ninja, FightMode.Weakest, 10, 1, 0.2, 0.4)
         {
             this.Name = "a spectre";
             this.Body = 26;
             this.Hue = 0x4001;
             this.BaseSoundID = 0x482;
 
-            this.SetStr(76, 100);
-            this.SetDex(76, 95);
-            this.SetInt(36, 60);
+            this.SetStr(100);
+            this.SetDex(95);
+            this.SetInt(60);
 
-            this.SetHits(46, 60);
+            this.SetHits(100);
 
-            this.SetDamage(7, 11);
+            this.SetDamage(10, 20);
 
             this.SetDamageType(ResistanceType.Physical, 50);
             this.SetDamageType(ResistanceType.Cold, 50);
@@ -30,11 +30,16 @@ namespace Server.Mobiles
             this.SetResistance(ResistanceType.Cold, 15, 25);
             this.SetResistance(ResistanceType.Poison, 10, 20);
 
-            this.SetSkill(SkillName.EvalInt, 55.1, 70.0);
-            this.SetSkill(SkillName.Magery, 55.1, 70.0);
-            this.SetSkill(SkillName.MagicResist, 55.1, 70.0);
-            this.SetSkill(SkillName.Tactics, 45.1, 60.0);
-            this.SetSkill(SkillName.Wrestling, 45.1, 55.0);
+            this.SetSkill(SkillName.EvalInt, 80.0);
+            this.SetSkill(SkillName.Magery, 80.0);
+            this.SetSkill(SkillName.MagicResist, 50.0);
+            this.SetSkill(SkillName.Tactics, 80.0);
+            this.SetSkill(SkillName.Wrestling, 80.0);
+            this.SetSkill(SkillName.Anatomy, 80.0);
+            this.SetSkill(SkillName.Hiding, 100.0);
+            this.SetSkill(SkillName.Stealth, 100.0);
+            this.SetSkill(SkillName.Ninjitsu, 70.0);
+            this.SetSkill(SkillName.Tinkering, 900.0);
 
             this.Fame = 4000;
             this.Karma = -4000;
@@ -55,6 +60,14 @@ namespace Server.Mobiles
             }
         }
 
+        public override Poison HitPoison
+        {
+            get
+            {
+                return Poison.Lesser;
+            }
+        }
+
         public override TribeType Tribe { get { return TribeType.Undead; } }
 
         public override Poison PoisonImmune
@@ -66,7 +79,7 @@ namespace Server.Mobiles
         }
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Meager);
+            this.AddLoot(LootPack.Average);
         }
 
         public override void Serialize(GenericWriter writer)

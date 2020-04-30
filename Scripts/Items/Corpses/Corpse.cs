@@ -117,6 +117,7 @@ namespace Server.Items
 
         public static readonly TimeSpan InstancedCorpseTime = TimeSpan.FromMinutes(3.0);
 
+            //DISABLED INSTANCED LOOT
         [CommandProperty(AccessLevel.GameMaster)]
         public virtual bool InstancedCorpse
         {
@@ -533,7 +534,7 @@ namespace Server.Items
                 if (!owner.Player)
                 {
                     //c.AssignInstancedLoot();
-                    c.HasAssignedInstancedLoot = true;
+                    c.HasAssignedInstancedLoot = false;
                 }
                 else
                 {
