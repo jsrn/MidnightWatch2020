@@ -92,6 +92,11 @@ namespace Server.Mobiles
             shield.Hue = 0x4001;
             AddItem(shield);
 
+            Cloak cloak = new Cloak ();
+            cloak.Movable = false;
+            cloak.Hue = 0x4001;
+            AddItem(cloak);
+
             Surcoat middletorso = new Surcoat();
             middletorso.Movable = false;
             middletorso.Hue = 0x4001;
