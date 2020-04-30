@@ -11,7 +11,7 @@ namespace Server.Mobiles
     {
         [Constructable]
         public CursedTemplar()
-            : base(AIType.AI_Berserk, FightMode.Closest, 10, 1, 0.2, 0.4)
+            : base(AIType.AI_z, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
             Name = "A Cursed Templar";
             SpeechHue = Utility.RandomDyedHue();
@@ -43,7 +43,7 @@ namespace Server.Mobiles
             Fame = 1000;
             Karma = -1000;
 
-            VikingSword melee = new VikigSword();
+            VikingSword melee = new VikingSword();
             melee.Movable = false ;
             AddItem(melee);
             melee.Hue = 0x4001;
