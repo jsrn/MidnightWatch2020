@@ -43,10 +43,10 @@ namespace Server.Mobiles
             Fame = 1000;
             Karma = -1000;
 
-            VikingSword melee = new VikingSword();
-            melee.Movable = false ;
-            AddItem(melee);
-            melee.Hue = 0x4001;
+            VikingSword onehanded = new VikingSword();
+            onehanded.Movable = false;
+            onehanded.Hue = 0x4001;
+            AddItem(onehanded);
 
             PlateHelm helm = new PlateHelm();
             helm.Movable = false;
@@ -73,10 +73,10 @@ namespace Server.Mobiles
             legs.Hue = 0x4001;
             AddItem(legs);
 
-            MetalKiteShield shield = new MetalKiteShield();
-            shield.Movable = false;
-            shield.Hue = 0x4001;
-            AddItem(shield);
+            WoodenKiteShield twohanded = new WoodenKiteShield();
+            twohanded.Movable = false;
+            twohanded.Hue = 0x4001;
+            AddItem(twohanded);
 
             Cloak cloak = new Cloak ();
             cloak.Movable = false;
@@ -87,26 +87,6 @@ namespace Server.Mobiles
             middletorso.Movable = false;
             middletorso.Hue = 0x4001;
             AddItem(middletorso);
-
-            switch ( Utility.Random(4))
-            {
-                case 0:
-                    AddItem(new Longsword() {Hue = 16385});
-                    AddItem(new MetalKiteShield() {Hue = 16385});
-                    break;
-                case 1:
-                    AddItem(new VikingSword() {Hue = 16385});
-                    AddItem(new MetalKiteShield() {Hue = 16385});
-                    break;
-                case 2:
-                    AddItem(new Mace() {Hue = 16385});
-                    AddItem(new MetalKiteShield() {Hue = 16385});
-                    break;
-                case 3:
-                    AddItem(new WarAxe() {Hue = 16385});
-                    AddItem(new MetalKiteShield() {Hue = 16385});
-                    break;
-            }
         }
 
         public CursedTemplar(Serial serial)
@@ -155,6 +135,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
+            AddLoot(LootPack.Average);
             AddLoot(LootPack.Average);
         }
 
