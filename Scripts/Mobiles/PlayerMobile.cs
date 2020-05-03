@@ -3376,6 +3376,10 @@ namespace Server.Mobiles
 		{
 			int disruptThreshold;
 
+			#region MidnightWatch
+			from.RevealingAction();
+			#region
+
 			if (from != null && from.Player)
 			{
 				disruptThreshold = 19;
