@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
 using Server.Items;
+using Server.Mobiles;
 
 namespace Server.Engines.Craft
 {
@@ -323,6 +323,7 @@ namespace Server.Engines.Craft
                 // Test code: items like sextant parts can be crafted either directly from ingots, or from different parts
                 realCraftItem.Craft(from, this, typeRes, tool);
                 //craftItem.Craft( from, this, typeRes, tool );
+                ((PlayerMobile)from).RevealingAction();
             }
         }
 
