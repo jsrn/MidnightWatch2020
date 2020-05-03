@@ -1310,15 +1310,15 @@ namespace Server.Gumps
                                 {
                                     if (isOwner && m_House.MovingCrate == null && m_House.InternalizedVendors.Count == 0)
                                     {
-                                        if (from.AccessLevel < AccessLevel.GameMaster && DateTime.UtcNow <= m_House.BuiltOn.AddHours(1))
-                                        {
-                                            from.SendLocalizedMessage(1080178); // You must wait one hour between each house demolition.
-                                        }
-                                        else 
-                                        {
+                                        // if (from.AccessLevel < AccessLevel.GameMaster && DateTime.UtcNow <= m_House.BuiltOn.AddHours(1))
+                                        // {
+                                        //     from.SendLocalizedMessage(1080178); // You must wait one hour between each house demolition.
+                                        // }
+                                        // else 
+                                        // {
                                             from.CloseGump(typeof(HouseDemolishGump));
                                             from.SendGump(new HouseDemolishGump(from, m_House));
-                                        }
+                                        // }
                                     }
 
                                     break;

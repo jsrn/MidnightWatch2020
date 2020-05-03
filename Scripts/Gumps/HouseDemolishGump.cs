@@ -35,14 +35,13 @@ namespace Server.Gumps
 			AddImageTiled(10, 40, 400, 200, 2624);
 			AddAlphaRegion(10, 40, 400, 200);
 
-			AddHtmlLocalized(10, 40, 400, 200, 1061795, 32512, false, true); 
-			/* You are about to demolish your house.
-            * You will be refunded the house's value directly to your bank box.
-            * All items in the house will remain behind and can be freely picked up by anyone.
-            * Once the house is demolished, anyone can attempt to place a new house on the vacant land.
-            * This action will not un-condemn any other houses on your account, nor will it end your 7-day waiting period (if it applies to you).
-            * Are you sure you wish to continue?
-            */
+			string html = "You are about to demolish your house.";
+			html += "<br><br>";
+			html += "You will not receive a refund, but the space will be freed up to place another house. ";
+			html += "If you are trying to resize your house, co-ordinate with a GM, who will place the new plot ";
+			html += "for you and charge you the difference between the two house sizes.";
+
+			AddHtml(10, 40, 400, 200, html, false, true); 
 
 			AddImageTiled(10, 250, 400, 20, 2624);
 			AddAlphaRegion(10, 250, 400, 20);
@@ -85,88 +84,88 @@ namespace Server.Gumps
 						// You cannot do that that while you still have unclaimed contract vendor inventory in your house.
 						return;
 					}
-
-                    else if (m_House.HasActiveAuction)
-                    {
-                        m_Mobile.SendLocalizedMessage(1156453); 
-                        // You cannot currently take this action because you have auction safes locked down in your home. You must remove them first.
-                        return;
-                    }
-
-					if (m_Mobile.AccessLevel >= AccessLevel.GameMaster)
+					else if (m_House.HasActiveAuction)
 					{
-						m_Mobile.SendMessage("You do not get a refund for your house as you are not a player");
+							m_Mobile.SendLocalizedMessage(1156453); 
+							// You cannot currently take this action because you have auction safes locked down in your home. You must remove them first.
+							return;
+					}
+
+					// if (m_Mobile.AccessLevel >= AccessLevel.GameMaster)
+					// {
+					// m_Mobile.SendMessage("You do not get a refund for your house as you are not a player");
 						m_House.RemoveKeys(m_Mobile);
 						m_House.Delete();
-					}
-					else
-					{
-						Item toGive;
+						m_Mobile.SendMessage("Your house has been demolished.");
+					// }
+					// else
+					// {
+					// 	Item toGive;
 
-						if (m_House.IsAosRules)
-						{
-							if (m_House.Price > 0)
-							{
-								toGive = new BankCheck(m_House.Price);
-							}
-							else
-							{
-								toGive = m_House.GetDeed();
-							}
-						}
-						else
-						{
-							toGive = m_House.GetDeed();
+					// 	if (m_House.IsAosRules)
+					// 	{
+					// 		if (m_House.Price > 0)
+					// 		{
+					// 			toGive = new BankCheck(m_House.Price);
+					// 		}
+					// 		else
+					// 		{
+					// 			toGive = m_House.GetDeed();
+					// 		}
+					// 	}
+					// 	else
+					// 	{
+					// 		toGive = m_House.GetDeed();
 
-							if (toGive == null && m_House.Price > 0)
-							{
-								toGive = new BankCheck(m_House.Price);
-							}
-						}
+					// 		if (toGive == null && m_House.Price > 0)
+					// 		{
+					// 			toGive = new BankCheck(m_House.Price);
+					// 		}
+					// 	}
 
-						if (AccountGold.Enabled && toGive is BankCheck)
-						{
-							var worth = ((BankCheck)toGive).Worth;
+					// 	if (AccountGold.Enabled && toGive is BankCheck)
+					// 	{
+					// 		var worth = ((BankCheck)toGive).Worth;
 
-							if (m_Mobile.Account != null && m_Mobile.Account.DepositGold(worth))
-							{
-								toGive.Delete();
+					// 		if (m_Mobile.Account != null && m_Mobile.Account.DepositGold(worth))
+					// 		{
+					// 			toGive.Delete();
 
-								m_Mobile.SendLocalizedMessage(1060397, worth.ToString("#,0"));
-								// ~1_AMOUNT~ gold has been deposited into your bank box.
+					// 			m_Mobile.SendLocalizedMessage(1060397, worth.ToString("#,0"));
+					// 			// ~1_AMOUNT~ gold has been deposited into your bank box.
 
-								m_House.RemoveKeys(m_Mobile);
-								m_House.Delete();
-								return;
-							}
-						}
+					// 			m_House.RemoveKeys(m_Mobile);
+					// 			m_House.Delete();
+					// 			return;
+					// 		}
+					// 	}
 
-						if (toGive != null)
-						{
-							var box = m_Mobile.BankBox;
+					// 	if (toGive != null)
+					// 	{
+					// 		var box = m_Mobile.BankBox;
 
-							if (box.TryDropItem(m_Mobile, toGive, false))
-							{
-								if (toGive is BankCheck)
-								{
-									m_Mobile.SendLocalizedMessage(1060397, ((BankCheck)toGive).Worth.ToString("#,0"));
-									// ~1_AMOUNT~ gold has been deposited into your bank box.
-								}
+					// 		if (box.TryDropItem(m_Mobile, toGive, false))
+					// 		{
+					// 			if (toGive is BankCheck)
+					// 			{
+					// 				m_Mobile.SendLocalizedMessage(1060397, ((BankCheck)toGive).Worth.ToString("#,0"));
+					// 				// ~1_AMOUNT~ gold has been deposited into your bank box.
+					// 			}
 
-								m_House.RemoveKeys(m_Mobile);
-								m_House.Delete();
-							}
-							else
-							{
-								toGive.Delete();
-								m_Mobile.SendLocalizedMessage(500390); // Your bank box is full.
-							}
-						}
-						else
-						{
-							m_Mobile.SendMessage("Unable to refund house.");
-						}
-					}
+					// 			m_House.RemoveKeys(m_Mobile);
+					// 			m_House.Delete();
+					// 		}
+					// 		else
+					// 		{
+					// 			toGive.Delete();
+					// 			m_Mobile.SendLocalizedMessage(500390); // Your bank box is full.
+					// 		}
+					// 	}
+					// 	else
+					// 	{
+					// 		m_Mobile.SendMessage("Unable to refund house.");
+					// 	}
+					// }
 				}
 				else
 				{
