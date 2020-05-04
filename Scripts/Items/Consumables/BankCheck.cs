@@ -60,7 +60,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			Hue = 0x34;
-			LootType = LootType.Blessed;
+			//LootType = LootType.Blessed;
 
 			m_Worth = worth;
 		}
@@ -92,7 +92,7 @@ namespace Server.Items
 		public override void Deserialize(GenericReader reader)
 		{
 			base.Deserialize(reader);
-			LootType = LootType.Blessed;
+			//LootType = LootType.Blessed;
 
 			var version = reader.ReadInt();
 
