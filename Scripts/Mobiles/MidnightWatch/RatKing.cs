@@ -68,6 +68,8 @@ namespace Server.Mobiles
         {
         }
 
+		public override bool BardImmune { get { return true; } }
+
         public override InhumanSpeech SpeechType
         {
             get

@@ -39,7 +39,6 @@ namespace Server.Mobiles
             this.SetSkill(SkillName.Hiding, 100.0);
             this.SetSkill(SkillName.Stealth, 100.0);
             this.SetSkill(SkillName.Ninjitsu, 70.0);
-            this.SetSkill(SkillName.Tinkering, 900.0);
 
             this.Fame = 4000;
             this.Karma = -4000;
@@ -51,6 +50,8 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
+
+		public override bool BardImmune { get { return true; } }
 
         public override bool BleedImmune
         {

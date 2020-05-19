@@ -40,7 +40,6 @@ namespace Server.Mobiles
             this.SetSkill(SkillName.MagicResist, 150.5, 200.0);
             this.SetSkill(SkillName.Tactics, 50.1, 70.0);
             this.SetSkill(SkillName.Wrestling, 60.1, 80.0);
-            this.SetSkill(SkillName.Tinkering, 900.0);
 
             this.Fame = 18000;
             this.Karma = -18000;
@@ -61,6 +60,8 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
+
+		public override bool BardImmune { get { return true; } }
 
         public override TribeType Tribe { get { return TribeType.Undead; } }
 

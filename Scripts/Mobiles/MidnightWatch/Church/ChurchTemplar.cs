@@ -84,6 +84,8 @@ namespace Server.Mobiles
         {
         }
 
+		public override bool BardImmune { get { return true; } }
+
         public override WeaponAbility GetWeaponAbility()
         {
             return Utility.RandomBool() ? WeaponAbility.CrushingBlow : WeaponAbility.BleedAttack;

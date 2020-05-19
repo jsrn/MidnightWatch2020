@@ -41,7 +41,6 @@ namespace Server.Mobiles
             SetSkill(SkillName.Parry, 90.0);
             SetSkill(SkillName.Hiding, 90.0);
             SetSkill(SkillName.Stealth, 90.0);
-            SetSkill(SkillName.Tinkering, 900.0);
 
             Fame = 1000;
             Karma = -1000;
@@ -79,6 +78,8 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
+
+		public override bool BardImmune { get { return true; } }
 
         public override Poison HitPoison
         {

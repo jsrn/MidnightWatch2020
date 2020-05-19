@@ -38,7 +38,6 @@ namespace Server.Mobiles
             SetSkill(SkillName.Tactics, 120.0);
             SetSkill(SkillName.Anatomy, 120.0);
             SetSkill(SkillName.Parry, 100.0);
-            SetSkill(SkillName.Tinkering, 900.0);
 
             Fame = 1000;
             Karma = -1000;
@@ -93,7 +92,8 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
-
+        
+		public override bool BardImmune { get { return true; } }
         public override bool BleedImmune { get { return true; } }
         public override Poison PoisonImmune { get { return Poison.Lethal; } }
 

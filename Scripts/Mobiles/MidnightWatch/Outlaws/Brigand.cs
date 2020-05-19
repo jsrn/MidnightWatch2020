@@ -39,7 +39,6 @@ namespace Server.Mobiles
             SetSkill(SkillName.Tactics, 75.0);
             SetSkill(SkillName.Parry, 50.0);
             SetSkill(SkillName.Wrestling, 15.0, 37.5);
-            SetSkill(SkillName.Tinkering, 900.0);
 
             Fame = 1000;
             Karma = -1000;
@@ -80,6 +79,8 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
+
+		public override bool BardImmune { get { return true; } }
 
         public override bool ClickTitle
         {

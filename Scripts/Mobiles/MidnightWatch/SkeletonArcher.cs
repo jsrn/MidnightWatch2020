@@ -59,6 +59,7 @@ namespace Server.Mobiles
 			AddLoot( LootPack.Meager );
 		}
 
+		public override bool BardImmune { get { return true; } }
 		public override bool BleedImmune{ get{ return true; } }
 		public override Poison PoisonImmune{ get{ return Poison.Lesser; } }
 

@@ -82,6 +82,8 @@ namespace Server.Mobiles
         {
         }
 
+		public override bool BardImmune { get { return true; } }
+
         public override bool ClickTitle
         {
             get

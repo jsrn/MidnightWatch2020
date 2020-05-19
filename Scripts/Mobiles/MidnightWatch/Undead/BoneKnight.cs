@@ -34,7 +34,6 @@ namespace Server.Mobiles
             this.SetSkill(SkillName.MagicResist, 80.0);
             this.SetSkill(SkillName.Tactics, 100.0);
             this.SetSkill(SkillName.Wrestling, 95.0);
-            this.SetSkill(SkillName.Tinkering, 500.0);
 
             this.Fame = 3000;
             this.Karma = -3000;
@@ -44,6 +43,8 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
+
+		public override bool BardImmune { get { return true; } }
 
         public override bool BleedImmune
         {
