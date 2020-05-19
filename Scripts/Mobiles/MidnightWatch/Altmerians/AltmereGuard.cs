@@ -32,7 +32,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Macing, 90.0);
             SetSkill(SkillName.MagicResist, 50.0);
             SetSkill(SkillName.Swords, 90.0);
-            SetSkill(SkillName.Fencing, 90.0)
+            SetSkill(SkillName.Fencing, 90.0);
             SetSkill(SkillName.Tactics, 90.0);
             SetSkill(SkillName.Anatomy, 90.0);
             SetSkill(SkillName.Parry, 80.0);
