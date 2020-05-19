@@ -28,11 +28,11 @@ namespace Server.Mobiles
 				Add( new GenericBuyInfo( typeof( SpidersSilk ), 3, 20, 0xF8D, 0 ) );
 				Add( new GenericBuyInfo( typeof( SulfurousAsh ), 4, 20, 0xF8C, 0 ) );
 
-				Add( new GenericBuyInfo( typeof( BatWing ), 4, 20, 0xF78, 0 ) );
-				Add( new GenericBuyInfo( typeof( GraveDust ), 4, 20, 0xF8F, 0 ) );
-				Add( new GenericBuyInfo( typeof( DaemonBlood ), 4, 20, 0xF7D, 0 ) );
-				Add( new GenericBuyInfo( typeof( NoxCrystal ), 4, 20, 0xF8E, 0 ) );
-				Add( new GenericBuyInfo( typeof( PigIron ), 4, 20, 0xF8A, 0 ) );
+				Add( new GenericBuyInfo( typeof( BatWing ), 4, 200, 0xF78, 0 ) );
+				Add( new GenericBuyInfo( typeof( GraveDust ), 4, 200, 0xF8F, 0 ) );
+				Add( new GenericBuyInfo( typeof( DaemonBlood ), 4, 200, 0xF7D, 0 ) );
+				Add( new GenericBuyInfo( typeof( NoxCrystal ), 4, 200, 0xF8E, 0 ) );
+				Add( new GenericBuyInfo( typeof( PigIron ), 4, 200, 0xF8A, 0 ) );
 
 				Add( new GenericBuyInfo( typeof( NecromancerSpellbook ), 150, 10, 0x2253, 0 ) );
 				

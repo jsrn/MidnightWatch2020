@@ -42,7 +42,7 @@ namespace Server.Mobiles
 			VirtualArmor = 16;
 
 			AddItem( new Bow() );
-			PackItem( new Arrow( Utility.RandomMinMax( 50, 70 ) ) );
+			PackItem( new Arrow( Utility.RandomMinMax( 3, 10 ) ) );
 
 			switch ( Utility.Random( 5 ))
 			{
@@ -56,7 +56,7 @@ namespace Server.Mobiles
 
 		public override void GenerateLoot()
 		{
-			AddLoot( LootPack.Poor );
+			AddLoot( LootPack.Meager );
 		}
 
 		public override bool BleedImmune{ get{ return true; } }

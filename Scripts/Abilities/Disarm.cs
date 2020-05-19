@@ -93,7 +93,16 @@ namespace Server.Items
 
         private Type[] _AutoRearms =
         {
-            typeof(BritannianInfantry)
+            typeof(BritannianInfantry),
+            typeof(CovianWatchman), typeof(CovianArcher), typeof(CovianGuard), typeof(CovianOfficer),
+                typeof(CovianDragoon), typeof(CovianScout), typeof(CovianGrenadier), typeof(CovianArcanist),
+            typeof(YewishFootman), typeof(YewishGuard), typeof(YewishOfficer), typeof(YewishArcher),
+                typeof(YewishWaywatcher), typeof(YewishBesieger),
+            typeof(VesperFirebrand), typeof(VesperGuard), typeof(VesperOfficer), typeof(VesperArcher),
+                typeof(VesperBlackguard), typeof(VesperMage), typeof(VesperElite),
+            typeof(AltmereArcher), typeof(AltmereGuard),
+            typeof(Brigand), typeof(BrigandArcher), typeof(Highwayman),
+            typeof(Pirate), typeof(PirateArcher), typeof (PirateSneak), typeof(DreadCaptain),
         };
 
         public static List<Mobile> _Immunity;
