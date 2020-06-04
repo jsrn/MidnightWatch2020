@@ -43,7 +43,7 @@ namespace Server.Items
         {
             get
             {
-                return WeaponAbility.MovingShot;
+                return WeaponAbility.ArmorIgnore;
             }
         }
         public override WeaponAbility SecondaryAbility

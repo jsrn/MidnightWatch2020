@@ -30,7 +30,7 @@ namespace Server.Items
         {
             get
             {
-                return WeaponAbility.ForceOfNature;
+                return WeaponAbility.Disarm;
             }
         }
         public override int AosStrengthReq

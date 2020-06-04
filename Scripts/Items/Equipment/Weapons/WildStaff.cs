@@ -21,14 +21,14 @@ namespace Server.Items
         {
             get
             {
-                return WeaponAbility.Block;
+                return WeaponAbility.ParalyzingBlow;
             }
         }
         public override WeaponAbility SecondaryAbility
         {
             get
             {
-                return WeaponAbility.ForceOfNature;
+                return WeaponAbility.Disarm;
             }
         }
         public override int AosStrengthReq
