@@ -30,7 +30,7 @@ namespace Server.Items
         {
             get
             {
-                return WeaponAbility.BleedAttack;
+                return WeaponAbility.ParalyzingBlow;
             }
         }
         public override int AosStrengthReq

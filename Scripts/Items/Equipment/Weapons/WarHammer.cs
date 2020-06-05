@@ -24,7 +24,7 @@ namespace Server.Items
         {
             get
             {
-                return WeaponAbility.ArmorIgnore;
+                return WeaponAbility.WhirlwindAttack;
             }
         }
         public override WeaponAbility SecondaryAbility
