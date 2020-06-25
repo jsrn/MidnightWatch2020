@@ -13,33 +13,33 @@ namespace Server.Mobiles
             Body = 0x58f;
             Female = true;
 
-            SetStr(300, 320);
-            SetDex(190, 200);
-            SetInt(170, 210);
+            this.SetStr(60, 80);
+            this.SetDex(70, 90);
+            this.SetInt(11, 25);
 
-            SetHits(190, 200);
+            this.SetHits(34, 48);
+            this.SetMana(0);
 
-            SetDamage(16, 22);
+            this.SetDamage(5, 9);
 
-            SetDamageType(ResistanceType.Physical, 100);
+            this.SetDamageType(ResistanceType.Physical, 100);
 
-            SetResistance(ResistanceType.Physical, 50, 60);
-            SetResistance(ResistanceType.Fire, 20, 30);
-            SetResistance(ResistanceType.Cold, 55, 65);
-            SetResistance(ResistanceType.Poison, 25, 35);
-            SetResistance(ResistanceType.Energy, 35);
+            this.SetResistance(ResistanceType.Physical, 15, 20);
+            this.SetResistance(ResistanceType.Fire, 5, 10);
+            this.SetResistance(ResistanceType.Cold, 10, 15);
+            this.SetResistance(ResistanceType.Poison, 5, 10);
+            this.SetResistance(ResistanceType.Energy, 5, 10);
 
-            SetSkill(SkillName.MagicResist, 40.0, 50.0);
-            SetSkill(SkillName.Tactics, 50.0, 70.0);
-            SetSkill(SkillName.Wrestling, 75.0, 90.0);
-            SetSkill(SkillName.DetectHidden, 50.0, 60.0);
+            this.SetSkill(SkillName.MagicResist, 27.6, 45.0);
+            this.SetSkill(SkillName.Tactics, 30.1, 50.0);
+            this.SetSkill(SkillName.Wrestling, 40.1, 60.0);
 
-            Tamable = false;
-            ControlSlots = 2;
-            MinTameSkill = 72.0;
+            this.Fame = 450;
+            this.Karma = 0;
 
-            SetWeaponAbility(WeaponAbility.BleedAttack);
-            SetSpecialAbility(SpecialAbility.GraspingClaw);
+            this.Tamable = true;
+            this.ControlSlots = 1;
+            this.MinTameSkill = 23.1;
         }
 
         public BloodFox(Serial serial) : base(serial)

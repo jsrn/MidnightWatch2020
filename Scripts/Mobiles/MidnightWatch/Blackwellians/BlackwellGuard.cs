@@ -23,7 +23,7 @@ namespace Server.Mobiles
                 Name = NameList.RandomName("male");
             }
 
-            Name = "An Blackwell Guard";
+            Name = "A Blackwell Guard";
             SpeechHue = Utility.RandomDyedHue();
             Hue = Utility.RandomSkinHue();
             Body = 400;

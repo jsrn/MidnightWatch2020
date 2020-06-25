@@ -68,6 +68,9 @@ namespace Server.Mobiles
                 return FoodType.Meat;
             }
         }
+        
+        public override bool CanAngerOnTame { get { return true; } }
+
         public override PackInstinct PackInstinct
         {
             get

@@ -37,11 +37,9 @@ namespace Server.Mobiles
             this.HairHue = this.Race.RandomHairHue();
             this.Race.RandomFacialHair(this);
 
-            this.AddItem(new Katana());
-
-            this.SetStr(26, 26);
-            this.SetDex(21, 21);
-            this.SetInt(16, 16);
+            this.SetStr(50);
+            this.SetDex(50);
+            this.SetInt(50);
 
             this.SetDamage(10, 23);
 
