@@ -4,10 +4,10 @@ using Server.Misc;
 
 namespace Server.Mobiles 
 {
-    public class AltmereArcher : BaseHire 
+    public class BlackwellArcher : BaseHire 
     {
         [Constructable] 
-        public AltmereArcher()
+        public BlackwellArcher()
             : base(AIType.AI_Archer)
         {
             SpeechHue = Utility.RandomDyedHue();
@@ -29,7 +29,7 @@ namespace Server.Mobiles
             Hue = Utility.RandomSkinHue();
             Body = 400;
             Hits = 75;
-            Team = 100;
+            Team = 300;
 
             SetStr(85, 90);
             SetDex(80, 85);
@@ -51,9 +51,9 @@ namespace Server.Mobiles
             Karma = 1000;
 
             AddItem(new Boots() {Hue = 2012});
-            AddItem(new BodySash() {Hue = 1445});
-            AddItem(new Kilt() {Hue = 1445});
-            AddItem(new Bandana() {Hue = 1445});
+            AddItem(new BodySash() {Hue = 1308});
+            AddItem(new Kilt() {Hue = 1308});
+            AddItem(new Bandana() {Hue = 1308});
             AddItem(new PlateGorget() {Hue = 0});
             AddItem(new ChainChest() {Hue = 0});
             AddItem(new ChainLegs() {Hue = 0});
@@ -65,7 +65,7 @@ namespace Server.Mobiles
             PackGold(25, 100);
         }
 
-        public AltmereArcher(Serial serial)
+        public BlackwellArcher(Serial serial)
             : base(serial)
         {
         }

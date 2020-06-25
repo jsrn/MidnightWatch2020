@@ -4,11 +4,10 @@ using Server.Misc;
 
 namespace Server.Mobiles 
 {
-    public class AltmereArcher : BaseHire 
+    public class BlackwellGuard : BaseHire 
     {
         [Constructable] 
-        public AltmereArcher()
-            : base(AIType.AI_Archer)
+        public BlackwellGuard()
         {
             SpeechHue = Utility.RandomDyedHue();
             Hue = Utility.RandomSkinHue();
@@ -24,53 +23,71 @@ namespace Server.Mobiles
                 Name = NameList.RandomName("male");
             }
 
-            Name = "An Altmerian Archer";
+            Name = "An Blackwell Guard";
             SpeechHue = Utility.RandomDyedHue();
             Hue = Utility.RandomSkinHue();
             Body = 400;
-            Hits = 75;
-            Team = 100;
+            Hits = 100;
+            Team = 300;
 
-            SetStr(85, 90);
-            SetDex(80, 85);
-            SetInt(60, 75);
+            SetStr(100);
+            SetDex(90, 95);
+            SetInt(61, 75);
 
-            SetResistance(ResistanceType.Physical, 50);
+            SetResistance(ResistanceType.Physical, 60);
             SetResistance(ResistanceType.Fire, 50);
             SetResistance(ResistanceType.Cold, 50);
             SetResistance(ResistanceType.Poison, 50);
             SetResistance(ResistanceType.Energy, 50);
 
-            SetSkill(SkillName.Archery, 70.0);
-            SetSkill(SkillName.MagicResist, 30.0);
-            SetSkill(SkillName.Tactics, 80.0);
-            SetSkill(SkillName.Anatomy, 80.0);
-            SetSkill(SkillName.DetectHidden, 50.0);
+            SetSkill(SkillName.Macing, 90.0);
+            SetSkill(SkillName.MagicResist, 50.0);
+            SetSkill(SkillName.Swords, 90.0);
+            SetSkill(SkillName.Fencing, 90.0);
+            SetSkill(SkillName.Tactics, 90.0);
+            SetSkill(SkillName.Anatomy, 90.0);
+            SetSkill(SkillName.Parry, 80.0);
 
             Fame = 1000;
             Karma = 1000;
 
             AddItem(new Boots() {Hue = 2012});
-            AddItem(new BodySash() {Hue = 1445});
-            AddItem(new Kilt() {Hue = 1445});
-            AddItem(new Bandana() {Hue = 1445});
+            AddItem(new BodySash() {Hue = 1308});
+            AddItem(new Kilt() {Hue = 1308});
+            AddItem(new Bandana() {Hue = 1308});
             AddItem(new PlateGorget() {Hue = 0});
             AddItem(new ChainChest() {Hue = 0});
             AddItem(new ChainLegs() {Hue = 0});
             AddItem(new RingmailGloves() {Hue = 0});
-            AddItem(new Bow());
-            PackItem(new Arrow(10));
 
-            Utility.AssignRandomHair(this);
-            PackGold(25, 100);
+            switch ( Utility.Random(5))
+            {
+                case 0:
+                    AddItem(new Longsword());
+                    AddItem(new WoodenShield());
+                    break;
+                case 1:
+                    AddItem(new Pitchfork());
+                    break;
+                case 2:
+                    AddItem(new VikingSword());
+                    AddItem(new BronzeShield());
+                    break;
+                case 3:
+                    AddItem(new Spear());
+                    break;
+                case 4:
+                    AddItem(new Mace());
+                    AddItem(new MetalShield());
+                    break;
+            }
         }
-
-        public AltmereArcher(Serial serial)
+        public BlackwellGuard(Serial serial)
             : base(serial)
         {
         }
 
-        public override bool BardImmune { get { return true; } }
+		public override bool BardImmune { get { return true; } }
 
         public override bool ClickTitle
         {

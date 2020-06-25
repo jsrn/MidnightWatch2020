@@ -7,54 +7,57 @@ using Server.Misc;
 namespace Server.Mobiles
 {
     [CorpseName( "a yewish corpse" )]
-    public class YewishArcher : BaseCreature
+    public class YewishMarksman : BaseCreature
     {
         [Constructable]
-        public YewishArcher()
-            : base(AIType.AI_Archer, FightMode.Closest, 10, 1, 0.2, 0.4)
+        public YewishMarksman()
+            : base(AIType.AI_Archer, FightMode.Weakest, 10, 1, 0.2, 0.4)
         {
-            Name = "A Yewish Archer";
+            Name = "A Yewish Marksman";
             SpeechHue = Utility.RandomDyedHue();
             Hue = Utility.RandomSkinHue();
             Body = 400;
-            Hits = 75;
+            Hits = 150;
             Team = 300;
 
-            SetStr(85, 90);
-            SetDex(80, 85);
-            SetInt(60, 75);
+            SetStr(100);
+            SetDex(95);
+            SetInt(75);
 
-            SetResistance(ResistanceType.Physical, 55);
+            SetResistance(ResistanceType.Physical, 60);
             SetResistance(ResistanceType.Fire, 50);
             SetResistance(ResistanceType.Cold, 50);
             SetResistance(ResistanceType.Poison, 50);
             SetResistance(ResistanceType.Energy, 50);
 
-            SetSkill(SkillName.Macing, 80.0);
-            SetSkill(SkillName.MagicResist, 30.0);
-            SetSkill(SkillName.Swords, 70.0);
-            SetSkill(SkillName.Tactics, 80.0);
-            SetSkill(SkillName.Anatomy, 80.0);
-            SetSkill(SkillName.Parry, 70.0);
+            SetSkill(SkillName.Archery, 100.0);
+            SetSkill(SkillName.MagicResist, 60.0);
+            SetSkill(SkillName.Tactics, 90.0);
+            SetSkill(SkillName.Anatomy, 90.0);
+            SetSkill(SkillName.DetectHidden, 80.0);
 
             Fame = 1000;
             Karma = -1000;
 
-            AddItem(new Boots() {Hue = 0});
+            AddItem(new Boots());
             AddItem(new BodySash() {Hue = 48});
             AddItem(new Kilt() {Hue = 902});
-            AddItem(new ChainCoif() {Hue = 0});
-            AddItem(new ChainChest() {Hue = 0});
-            AddItem(new ChainLegs() {Hue = 0});
-            AddItem(new RingmailGloves() {Hue = 0});
-            AddItem(new Bow());
-
+            AddItem(new Cloak() {Hue = 902});
+            AddItem(new FeatheredHat() {Hue = 902});
+            AddItem(new PlateGorget());
+            AddItem(new ChainChest());
+            AddItem(new PlateArms() {Hue = 2213});
+            AddItem(new ChainLegs());
+            AddItem(new RingmailGloves());
+            AddItem(new LeatherNinjaBelt());
+            AddItem(new CompositeBow());
             PackItem(new Arrow(10));
+
 
             Utility.AssignRandomHair(this);
         }
 
-        public YewishArcher(Serial serial)
+        public YewishMarksman(Serial serial)
             : base(serial)
         {
         }
@@ -94,7 +97,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            AddLoot(LootPack.Meager);
+            AddLoot(LootPack.Average);
         }
 
         public override void Serialize(GenericWriter writer)

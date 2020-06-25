@@ -6,55 +6,77 @@ using Server.Misc;
 
 namespace Server.Mobiles
 {
-    [CorpseName( "a yewish corpse" )]
-    public class YewishArcher : BaseCreature
+    [CorpseName( "a royalist corpse" )]
+    public class BritainGuard : BaseCreature
     {
         [Constructable]
-        public YewishArcher()
-            : base(AIType.AI_Archer, FightMode.Closest, 10, 1, 0.2, 0.4)
+        public BritainGuard()
+            : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
-            Name = "A Yewish Archer";
+            Name = "A Britannian Guard";
             SpeechHue = Utility.RandomDyedHue();
             Hue = Utility.RandomSkinHue();
             Body = 400;
-            Hits = 75;
+            Hits = 100;
             Team = 300;
 
-            SetStr(85, 90);
-            SetDex(80, 85);
-            SetInt(60, 75);
+            SetStr(100);
+            SetDex(90, 95);
+            SetInt(61, 75);
 
-            SetResistance(ResistanceType.Physical, 55);
+            SetResistance(ResistanceType.Physical, 60);
             SetResistance(ResistanceType.Fire, 50);
             SetResistance(ResistanceType.Cold, 50);
             SetResistance(ResistanceType.Poison, 50);
             SetResistance(ResistanceType.Energy, 50);
 
-            SetSkill(SkillName.Macing, 80.0);
-            SetSkill(SkillName.MagicResist, 30.0);
-            SetSkill(SkillName.Swords, 70.0);
-            SetSkill(SkillName.Tactics, 80.0);
-            SetSkill(SkillName.Anatomy, 80.0);
-            SetSkill(SkillName.Parry, 70.0);
+            SetSkill(SkillName.Macing, 90.0);
+            SetSkill(SkillName.MagicResist, 50.0);
+            SetSkill(SkillName.Swords, 90.0);
+            SetSkill(SkillName.Tactics, 90.0);
+            SetSkill(SkillName.Anatomy, 90.0);
+            SetSkill(SkillName.Parry, 80.0);
 
             Fame = 1000;
             Karma = -1000;
 
-            AddItem(new Boots() {Hue = 0});
-            AddItem(new BodySash() {Hue = 48});
-            AddItem(new Kilt() {Hue = 902});
+            AddItem(new Boots() {Hue = 2012});
+            AddItem(new BodySash() {Hue = 648});
+            AddItem(new Kilt() {Hue = 648});
             AddItem(new ChainCoif() {Hue = 0});
+            AddItem(new PlateGorget() {Hue = 0});
             AddItem(new ChainChest() {Hue = 0});
-            AddItem(new ChainLegs() {Hue = 0});
+            AddItem(new PlateArms() {Hue = 0});
+            AddItem(new PlateLegs() {Hue = 0});
             AddItem(new RingmailGloves() {Hue = 0});
-            AddItem(new Bow());
 
-            PackItem(new Arrow(10));
+            switch ( Utility.Random(5))
+            {
+                case 0:
+                    AddItem(new Longsword());
+                    AddItem(new MetalShield() {Hue = 0});
+                    break;
+                case 1:
+                    AddItem(new Axe());
+                    break;
+                case 2:
+                    AddItem(new VikingSword());
+                    AddItem(new MetalShield() {Hue = 0});
+                    break;
+                case 3:
+                    AddItem(new Mace());
+                    AddItem(new MetalShield() {Hue = 0});
+                    break;
+                case 4:
+                    AddItem(new WarAxe());
+                    AddItem(new MetalShield() {Hue = 0});
+                    break;
+            }
 
             Utility.AssignRandomHair(this);
         }
 
-        public YewishArcher(Serial serial)
+        public BritainGuard(Serial serial)
             : base(serial)
         {
         }
@@ -94,7 +116,7 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            AddLoot(LootPack.Meager);
+            AddLoot(LootPack.Average);
         }
 
         public override void Serialize(GenericWriter writer)

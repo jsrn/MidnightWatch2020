@@ -96,13 +96,17 @@ namespace Server.Items
             typeof(BritannianInfantry),
             typeof(CovianWatchman), typeof(CovianArcher), typeof(CovianGuard), typeof(CovianOfficer),
                 typeof(CovianDragoon), typeof(CovianScout), typeof(CovianGrenadier), typeof(CovianArcanist),
+                typeof(CovianGrenadierArcher),
             typeof(YewishFootman), typeof(YewishGuard), typeof(YewishOfficer), typeof(YewishArcher),
-                typeof(YewishWaywatcher), typeof(YewishBesieger),
+                typeof(YewishWaywatcher), typeof(YewishBesieger), typeof(YewishMarksman),
             typeof(VesperFirebrand), typeof(VesperGuard), typeof(VesperOfficer), typeof(VesperArcher),
                 typeof(VesperBlackguard), typeof(VesperMage), typeof(VesperElite),
+            typeof(BritainGuard), typeof(BritainArcher), typeof(BritainOfficer),
             typeof(AltmereArcher), typeof(AltmereGuard),
+            typeof(BlackwellArcher), typeof(BlackwellGuard),
             typeof(Brigand), typeof(BrigandArcher), typeof(Highwayman),
             typeof(Pirate), typeof(PirateArcher), typeof (PirateSneak), typeof(DreadCaptain),
+            typeof(ArkwrightArcher), typeof(ArkwrightThug), typeof(ArkwrightSneak), typeof(ArkwrightEnforcer),
         };
 
         public static List<Mobile> _Immunity;

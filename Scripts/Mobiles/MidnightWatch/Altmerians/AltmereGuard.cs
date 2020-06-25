@@ -1,23 +1,34 @@
 using System;
-using Server;
 using Server.Items;
-using Server.Network;
 using Server.Misc;
 
-namespace Server.Mobiles
+namespace Server.Mobiles 
 {
-    [CorpseName( "an altmerian corpse" )]
-    public class AltmereGuard : BaseCreature
+    public class AltmereGuard : BaseHire 
     {
-        [Constructable]
+        [Constructable] 
         public AltmereGuard()
-            : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
+            SpeechHue = Utility.RandomDyedHue();
+            Hue = Utility.RandomSkinHue();
+
+            if (Female = Utility.RandomBool()) 
+            {
+                Body = 0x191;
+                Name = NameList.RandomName("female");
+            }
+            else 
+            {
+                Body = 0x190;
+                Name = NameList.RandomName("male");
+            }
+
             Name = "An Altmerian Guard";
             SpeechHue = Utility.RandomDyedHue();
             Hue = Utility.RandomSkinHue();
             Body = 400;
             Hits = 100;
+            Team = 100;            
 
             SetStr(100);
             SetDex(90, 95);
@@ -38,7 +49,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Parry, 80.0);
 
             Fame = 1000;
-            Karma = -1000;
+            Karma = 1000;
 
             AddItem(new Boots() {Hue = 2012});
             AddItem(new BodySash() {Hue = 1445});
@@ -66,14 +77,11 @@ namespace Server.Mobiles
                     AddItem(new Spear());
                     break;
                 case 4:
-                    AddItem(new Club());
+                    AddItem(new Mace());
                     AddItem(new MetalShield());
                     break;
             }
-
-            Utility.AssignRandomHair(this);
         }
-
         public AltmereGuard(Serial serial)
             : base(serial)
         {
@@ -88,37 +96,17 @@ namespace Server.Mobiles
                 return false;
             }
         }
-
-        public override bool ShowFameTitle
-        {
-            get
-            {
-                return false;
-            }
-        }
-
-        public override void OnDeath(Container c)
-        {
-            base.OnDeath(c);
-
-            if (Utility.RandomDouble() < 0.75)
-                c.DropItem(new SeveredHumanEars());
-        }
-
-        public override void GenerateLoot()
-        {
-            AddLoot(LootPack.Average);
-        }
-
-        public override void Serialize(GenericWriter writer)
+        public override void Serialize(GenericWriter writer) 
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+
+            writer.Write((int)0);// version 
         }
 
-        public override void Deserialize(GenericReader reader)
+        public override void Deserialize(GenericReader reader) 
         {
             base.Deserialize(reader);
+
             int version = reader.ReadInt();
         }
     }

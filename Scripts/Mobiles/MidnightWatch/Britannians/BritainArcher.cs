@@ -6,14 +6,14 @@ using Server.Misc;
 
 namespace Server.Mobiles
 {
-    [CorpseName( "a yewish corpse" )]
-    public class YewishArcher : BaseCreature
+    [CorpseName( "a royalist corpse" )]
+    public class BritainArcher : BaseCreature
     {
         [Constructable]
-        public YewishArcher()
-            : base(AIType.AI_Archer, FightMode.Closest, 10, 1, 0.2, 0.4)
+        public BritainArcher()
+            : base(AIType.AI_Archer, FightMode.Weakest, 10, 1, 0.2, 0.4)
         {
-            Name = "A Yewish Archer";
+            Name = "A Britannian Archer";
             SpeechHue = Utility.RandomDyedHue();
             Hue = Utility.RandomSkinHue();
             Body = 400;
@@ -24,37 +24,37 @@ namespace Server.Mobiles
             SetDex(80, 85);
             SetInt(60, 75);
 
-            SetResistance(ResistanceType.Physical, 55);
+            SetResistance(ResistanceType.Physical, 50);
             SetResistance(ResistanceType.Fire, 50);
             SetResistance(ResistanceType.Cold, 50);
             SetResistance(ResistanceType.Poison, 50);
             SetResistance(ResistanceType.Energy, 50);
 
-            SetSkill(SkillName.Macing, 80.0);
+            SetSkill(SkillName.Archery, 70.0);
             SetSkill(SkillName.MagicResist, 30.0);
-            SetSkill(SkillName.Swords, 70.0);
             SetSkill(SkillName.Tactics, 80.0);
             SetSkill(SkillName.Anatomy, 80.0);
-            SetSkill(SkillName.Parry, 70.0);
+            SetSkill(SkillName.DetectHidden, 50.0);
 
             Fame = 1000;
             Karma = -1000;
 
-            AddItem(new Boots() {Hue = 0});
-            AddItem(new BodySash() {Hue = 48});
-            AddItem(new Kilt() {Hue = 902});
-            AddItem(new ChainCoif() {Hue = 0});
-            AddItem(new ChainChest() {Hue = 0});
-            AddItem(new ChainLegs() {Hue = 0});
-            AddItem(new RingmailGloves() {Hue = 0});
-            AddItem(new Bow());
-
-            PackItem(new Arrow(10));
+            AddItem(new Boots() {Hue = 1308});
+            AddItem(new BodySash() {Hue = 1308});
+            AddItem(new Kilt() {Hue = 1308});
+            AddItem(new Bandana() {Hue = 1308});
+            AddItem(new LeatherGorget() {Hue = 2419});
+            AddItem(new LeatherChest() {Hue = 2419});
+            AddItem(new LeatherArms() {Hue = 2419});
+            AddItem(new LeatherLegs() {Hue = 2419});
+            AddItem(new LeatherGloves() {Hue = 2419});
+            AddItem(new Crossbow());
+            PackItem(new Bolt(10));
 
             Utility.AssignRandomHair(this);
         }
 
-        public YewishArcher(Serial serial)
+        public BritainArcher(Serial serial)
             : base(serial)
         {
         }

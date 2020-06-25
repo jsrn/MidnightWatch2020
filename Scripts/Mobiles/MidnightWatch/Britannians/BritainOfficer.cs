@@ -6,89 +6,84 @@ using Server.Misc;
 
 namespace Server.Mobiles
 {
-    [CorpseName( "a templar corpse" )]
-    public class ChurchTemplar : BaseCreature
+    [CorpseName( "a royalist corpse" )]
+    public class BritainOfficer : BaseCreature
     {
-
         [Constructable]
-        public ChurchTemplar()
-            : base(AIType.AI_Paladin, FightMode.Strongest, 10, 1, 0.2, 0.4)
+        public BritainOfficer()
+            : base(AIType.AI_Berserk, FightMode.Strongest, 10, 1, 0.2, 0.4)
         {
-            Name = "A Templar";
+            Name = "A Covian Officer";
             SpeechHue = Utility.RandomDyedHue();
             Hue = Utility.RandomSkinHue();
             Body = 400;
-            Hits = 250;
+            Hits = 150;
             Team = 300;
 
-            SetStr(200);
-            SetDex(100);
-            SetInt(75);
+            SetStr(110);
+            SetDex(100, 110);
+            SetInt(61, 75);
 
             SetResistance(ResistanceType.Physical, 70);
-            SetResistance(ResistanceType.Fire, 60);
-            SetResistance(ResistanceType.Cold, 50);
-            SetResistance(ResistanceType.Poison, 50);
-            SetResistance(ResistanceType.Energy, 60);
+            SetResistance(ResistanceType.Fire, 65);
+            SetResistance(ResistanceType.Cold, 65);
+            SetResistance(ResistanceType.Poison, 65);
+            SetResistance(ResistanceType.Energy, 65);
 
             SetSkill(SkillName.Macing, 120.0);
-            SetSkill(SkillName.MagicResist, 100.0);
             SetSkill(SkillName.Swords, 120.0);
             SetSkill(SkillName.Tactics, 120.0);
+            SetSkill(SkillName.Wrestling, 100.0);
             SetSkill(SkillName.Anatomy, 120.0);
-            SetSkill(SkillName.Parry, 100.0);
-            SetSkill(SkillName.Tinkering, 900.0);
+            SetSkill(SkillName.Parry, 120.0);
+            SetSkill(SkillName.MagicResist, 70.0);
 
             Fame = 1000;
             Karma = -1000;
 
-            AddItem(new Surcoat() {Hue = 0});
-            AddItem(new PlateHelm() {Hue = 0});
+            AddItem(new Boots() {Hue = 2012});
+            AddItem(new BodySash() {Hue = 1157});
+            AddItem(new Kilt() {Hue = 648});
+            AddItem(new Cap() {Hue = 648});
             AddItem(new PlateGorget() {Hue = 0});
             AddItem(new ChainChest() {Hue = 0});
             AddItem(new PlateArms() {Hue = 0});
             AddItem(new PlateLegs() {Hue = 0});
-            AddItem(new PlateGloves() {Hue = 0});
-            AddItem(new Cloak() {Hue = 1175});
+            AddItem(new RingmailGloves() {Hue = 0});
+            AddItem(new LeatherNinjaBelt());
 
             switch ( Utility.Random(5))
             {
                 case 0:
                     AddItem(new Longsword());
-                    AddItem(new WoodenKiteShield() {Hue = 0});
+                    AddItem(new MetalShield() {Hue = 0});
                     break;
                 case 1:
-                    AddItem(new Broadsword());
-                    AddItem(new WoodenKiteShield() {Hue = 0});
+                    AddItem(new WarHammer());
                     break;
                 case 2:
                     AddItem(new VikingSword());
-                    AddItem(new WoodenKiteShield() {Hue = 0});
+                    AddItem(new MetalShield() {Hue = 0});
                     break;
                 case 3:
                     AddItem(new Mace());
-                    AddItem(new WoodenKiteShield() {Hue = 0});
+                    AddItem(new MetalShield() {Hue = 0});
                     break;
                 case 4:
                     AddItem(new WarAxe());
-                    AddItem(new WoodenKiteShield() {Hue = 0});
+                    AddItem(new MetalShield() {Hue = 0});
                     break;
             }
 
             Utility.AssignRandomHair(this);
         }
 
-        public ChurchTemplar(Serial serial)
+        public BritainOfficer(Serial serial)
             : base(serial)
         {
         }
 
 		public override bool BardImmune { get { return true; } }
-
-        public override WeaponAbility GetWeaponAbility()
-        {
-            return Utility.RandomBool() ? WeaponAbility.CrushingBlow : WeaponAbility.BleedAttack;
-        }
 
         public override bool ClickTitle
         {
