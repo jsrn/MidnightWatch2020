@@ -59,15 +59,15 @@ namespace Server.Mobiles
             {
                 case 0:
                     AddItem(new Kryss());
-                    AddItem(new WoodenShield());
+                    AddItem(new MetalShield() {Hue = 2004});
                     break;
                 case 1:
-                    AddItem(new Cutlass());
-                    AddItem(new WoodenShield());
+                    AddItem(new Maul());
+                    AddItem(new MetalShield() {Hue = 2004});
                     break;
                 case 2:
                     AddItem(new Scimitar());
-                    AddItem(new WoodenShield());
+                    AddItem(new MetalShield() {Hue = 2004});
                     break;
                 case 3:
                     AddItem(new Hatchet());

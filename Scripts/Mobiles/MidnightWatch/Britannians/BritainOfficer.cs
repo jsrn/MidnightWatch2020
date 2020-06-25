@@ -42,9 +42,9 @@ namespace Server.Mobiles
             Karma = -1000;
 
             AddItem(new Boots() {Hue = 2012});
-            AddItem(new BodySash() {Hue = 1157});
-            AddItem(new Kilt() {Hue = 648});
-            AddItem(new Cap() {Hue = 648});
+            AddItem(new BodySash() {Hue = 1175});
+            AddItem(new Kilt() {Hue = 1308});
+            AddItem(new Cap() {Hue = 1308});
             AddItem(new PlateGorget() {Hue = 0});
             AddItem(new ChainChest() {Hue = 0});
             AddItem(new PlateArms() {Hue = 0});

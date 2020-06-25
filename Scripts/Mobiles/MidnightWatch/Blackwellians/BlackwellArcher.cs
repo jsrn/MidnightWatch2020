@@ -24,7 +24,7 @@ namespace Server.Mobiles
                 Name = NameList.RandomName("male");
             }
 
-            Name = "An Altmerian Archer";
+            Name = "A Blackwell Archer";
             SpeechHue = Utility.RandomDyedHue();
             Hue = Utility.RandomSkinHue();
             Body = 400;
