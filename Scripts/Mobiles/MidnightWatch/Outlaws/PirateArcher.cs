@@ -48,8 +48,8 @@ namespace Server.Mobiles
             AddItem(new ThighBoots(Utility.RandomNeutralHue()));
             AddItem(new Shirt(Utility.RandomNeutralHue()));
             AddItem(new SkullCap(Utility.RandomNeutralHue()));
-			AddItem( new Crossbow() );
-			PackItem( new Bolt( Utility.RandomMinMax( 50, 70 ) ) );
+			AddItem( new Crossbow());
+			PackItem( new Bolt(10));
 
             Utility.AssignRandomHair(this);
         }

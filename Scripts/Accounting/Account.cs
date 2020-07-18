@@ -583,7 +583,7 @@ namespace Server.Accounting
 		///     not supported by the client.
 		/// </summary>
 		[CommandProperty(AccessLevel.Administrator)]
-		public int Limit { get { return (Siege.SiegeShard ? Siege.CharacterSlots : 2); } }
+		public int Limit { get { return (Siege.SiegeShard ? Siege.CharacterSlots : 3); } }
 
 		/// <summary>
 		///     Gets the maxmimum amount of characters that this account can hold.
